@@ -1,0 +1,46 @@
+.footer{
+  border-color: #76b900;
+  @apply bg-black py-12 text-white border-b-4 border-t-4;
+  &-main,
+  &-bottom{
+    @apply max-w-screen-xl m-auto px-5;
+  }
+  &-main{
+    .footer-columns{
+      @apply grid gap-8 grid-cols-3;
+      .footer-column{
+        &-title{
+          border-color: #76b900;
+          @apply border-b-2 mb-4 pb-2;
+          p{
+            @apply text-2xl font-semibold;
+          }
+        }
+        .footer-column-link{
+          @apply py-1;
+          a{
+            color: #76b900;
+          }
+        }
+        .footer-column-link.social{
+          @apply flex text-center;
+          a{
+            @apply pl-2 py-1.5;
+          }
+        }
+      }
+    }
+  }
+  &-bottom{
+    &-description{
+      @apply flex flex-row flex-wrap;
+      span{
+        color: #76b900;
+        @apply px-2;
+      }
+    }
+    &-copyright{
+      @apply text-center;
+    }
+  }
+}

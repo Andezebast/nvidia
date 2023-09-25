@@ -1,0 +1,6 @@
+.App{
+  @apply flex flex-col h-full;
+  .main{
+    @apply grow bg-black text-white;
+  }
+}

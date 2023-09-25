@@ -1,0 +1,23 @@
+.header{
+  border-color: #76b900;
+  @apply bg-black border-b-4;
+  &-container{
+    @apply max-w-screen-xl m-auto py-1.5 px-5 flex items-center justify-between;
+    &-img{
+      @apply w-32;
+      img{
+        @apply w-full h-full object-cover;
+      }
+    }
+    &-links{
+      .header-link{
+        @apply text-white mx-1.5 p-1.5 duration-500 font-medium;
+        &:hover,
+        &.active{
+          background-color: #76b900;
+          @apply rounded text-black;
+        }
+      }
+    }
+  }
+}

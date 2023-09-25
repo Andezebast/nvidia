@@ -1,0 +1,16 @@
+.product-single-item{
+  @apply max-w-xl mx-auto py-20 flex flex-col items-center justify-center;
+  &-name{
+    @apply py-5 text-4xl font-extrabold;
+  }
+  &-description{
+    @apply pb-3.5 text-3xl text-center;
+  }
+  &-price{
+    @apply pb-2.5 text-2xl;
+    span{
+      color: #76b900;
+      @apply pr-2 text-base line-through;
+    }
+  }
+}
