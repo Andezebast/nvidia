@@ -1,25 +1,30 @@
 .product-filter {
   border-bottom: 4px solid #76b900;
-
   &-title {
     @apply font-semibold text-3xl;
   }
-
   @apply mb-10;
   &-content {
     @apply flex items-center py-5;
     .filter-content-search {
-      label.css-15jpx4h-MuiFormLabel-root-MuiInputLabel-root,
-      .css-1gpdw0k-MuiInputBase-root-MuiFilledInput-root {
+      .MuiFilledInput-root {
+        border: 1px solid white;
+
+        input {
+          padding: 20px 12px 8px;
+          @apply text-white;
+        }
+      }
+
+      label {
         @apply text-white;
       }
-      .css-1gpdw0k-MuiInputBase-root-MuiFilledInput-root {
-        border: 1px solid white;
-      }
+
       .css-1k4kv49-MuiFormLabel-root-MuiInputLabel-root,
       .css-1k4kv49-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
         color: #76b900;
       }
+
       .css-1gpdw0k-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled, .Mui-error):before {
         border-bottom: 1px solid #76b900;
       }
@@ -30,36 +35,34 @@
       @apply flex items-center px-2 mx-4;
       .filter-content-item {
         @apply text-xl p-2 flex items-center;
-        .MuiSwitch-root{
-          .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked{
-            color: #76b900;
-          }
-          .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track{
-            background-color: #76b900;
-          }
-          .css-1yjjitx-MuiSwitch-track{
-            @apply bg-white;
-          }
+        .MuiButtonBase-root.Mui-checked{
+          color: #76b900;
         }
+        .MuiButtonBase-root.Mui-checked + .MuiSwitch-track {
+          background-color: #76b900;
+        }
+        .MuiSwitch-track {
+          @apply bg-white;
+        }
+
       }
     }
-
     .filter-content-category {
       @apply flex;
       .category-item {
         @apply flex items-center p-2;
-        p{
+        p {
           @apply pl-1;
         }
-        .MuiButtonBase-root{
-          svg{
+        .MuiButtonBase-root {
+          svg {
             @apply w-7 h-7 text-white;
           }
         }
-        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked{
+        .MuiCheckbox-root.Mui-checked {
           color: #76b900;
-          svg{
-            path{
+          svg {
+            path {
               fill: #76b900;
             }
           }

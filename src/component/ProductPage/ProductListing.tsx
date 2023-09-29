@@ -9,6 +9,7 @@ import {motion} from "framer-motion";
 const ProductListing: FC = () => {
     const dispatch = useAppDispatch();
     const {products, isLoading, error} = useAppSelector(state => state.productsReducer)
+    console.log(products)
     useEffect(() => {
         dispatch(fetchProducts());
     }, [])
