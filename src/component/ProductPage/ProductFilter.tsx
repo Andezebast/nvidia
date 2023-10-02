@@ -1,21 +1,54 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './ProductFilter.scss';
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
+import {IProduct} from "../../models/IProduct";
 /*--------------------------------------------*/
-const ProductFilter: FC = () => {
-    const [inputValue, setInputValue] = useState('');
+interface IProps {
+    propsProducts: IProduct[] | any[],
+    setFilterPropsProducts: Function,
+    setEmptyPropsProducts: Function
+}
+/*--------------------------------------------*/
+const ProductFilter: FC<IProps> = ({ propsProducts, setFilterPropsProducts, setEmptyPropsProducts}) => {
+    const [inputSearchValue, setInputSearchValue] = useState('');
+    const [boolMass, setBoolMass] = useState<string[]>([]);
+    const [emptyProducts, setEmptyProducts] = useState<boolean>();
     /*---------------------------*/
     const handleEventSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(event.target.value)
+        setInputSearchValue(event.target.value)
     }
     const handleEventBool = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target)
+        if (boolMass.indexOf(event.target.name) >= 0) {
+            setBoolMass(boolMass.filter(el => el !== event.target.name))
+        } else {
+            setBoolMass([...boolMass, event.target.name])
+        }
     }
     const handleEventCategory = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target)
+        // console.log(event.target)
     }
+    useEffect(()=>{
+        if(propsProducts){
+            let currentFilterProducts = propsProducts.filter(product => {
+                let bool = boolMass.length ? !boolMass.some(bool => product[bool] === false) : true;
+                let search = inputSearchValue.length ? product.name.toLowerCase().includes(inputSearchValue.toLowerCase()) : true;
+                return search && bool && product
+            });
+            if(currentFilterProducts.length >= 1){
+                setEmptyProducts(false)
+            } else{
+                setEmptyProducts(true)
+            }
+            console.log(currentFilterProducts, 'filterMass');
+            console.log(currentFilterProducts.length, 'filterMass length');
+            console.log(emptyProducts, 'boolean Filter')
+            setEmptyPropsProducts(emptyProducts);
+            setFilterPropsProducts(currentFilterProducts);
+        }
+    },[inputSearchValue, boolMass])
+
     return (
         <div className='product-filter'>
             <div className="product-filter-title">
@@ -23,7 +56,7 @@ const ProductFilter: FC = () => {
             </div>
             <div className="product-filter-content">
                 <div className="filter-content-search">
-                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch} value={inputValue}/>
+                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch} value={inputSearchValue}/>
                 </div>
                 <div className="filter-content-items">
                     <div className="filter-content-item">
@@ -33,10 +66,6 @@ const ProductFilter: FC = () => {
                     <div className="filter-content-item">
                         <Switch name='isSale' onChange={handleEventBool}/>
                         <p>Sale</p>
-                    </div>
-                    <div className="filter-content-item">
-                        <Switch name='price' onChange={handleEventBool}/>
-                        <p>Price</p>
                     </div>
                 </div>
                 <div className="filter-content-category">

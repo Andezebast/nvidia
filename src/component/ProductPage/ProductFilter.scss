@@ -9,23 +9,20 @@
     .filter-content-search {
       .MuiFilledInput-root {
         border: 1px solid white;
-
         input {
           padding: 20px 12px 8px;
           @apply text-white;
         }
       }
-
       label {
         @apply text-white;
       }
-
-      .css-1k4kv49-MuiFormLabel-root-MuiInputLabel-root,
-      .css-1k4kv49-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+      .MuiFormLabel-root.Mui-focused,
+      .MuiFormLabel-root.MuiInputLabel-shrink{
         color: #76b900;
       }
 
-      .css-1gpdw0k-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled, .Mui-error):before {
+      .MuiInputBase-input:hover:not(.Mui-disabled, .Mui-error):before {
         border-bottom: 1px solid #76b900;
       }
     }

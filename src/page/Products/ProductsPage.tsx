@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {FC, useState} from 'react';
 import './ProductsPage.scss';
 import ProductFilter from '../../component/ProductPage/ProductFilter';
 import ProductListing from '../../component/ProductPage/ProductListing';
+import {IProduct} from "../../models/IProduct";
 /*---------------------------------------------*/
-const ProductsPage = () => {
-
+type IPropsProducts = IProduct[] | [];
+/*---------------------------------------------*/
+const ProductsPage: FC = () => {
+    const [propsProducts, setPropsProducts] = useState<IPropsProducts>([]);
+    const [filterPropsProducts, setFilterPropsProducts] = useState<IPropsProducts>([]);
+    const [emptyPropsProducts, setEmptyPropsProducts] = useState<boolean | any>();
     return (
         <div className='product-page'>
-            <ProductFilter />
-            <ProductListing />
+            <ProductFilter propsProducts={propsProducts} setFilterPropsProducts={setFilterPropsProducts} setEmptyPropsProducts={setEmptyPropsProducts}/>
+            <ProductListing setPropsProducts={setPropsProducts} filterPropsProducts={filterPropsProducts} emptyPropsProducts={emptyPropsProducts}/>
         </div>
     );
 };
