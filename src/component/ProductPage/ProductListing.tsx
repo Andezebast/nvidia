@@ -69,6 +69,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
             <div className='product-listing-error'>{error}</div>
         )
     }
+    console.log(emptyPropsProducts)
     if(emptyPropsProducts){
         return(
             <div className='product-listing-empty'>There are no products matching this filter!</div>

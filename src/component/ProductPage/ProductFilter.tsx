@@ -4,17 +4,18 @@ import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
 import {IProduct} from "../../models/IProduct";
+
 /*--------------------------------------------*/
 interface IProps {
     propsProducts: IProduct[] | any[],
     setFilterPropsProducts: Function,
     setEmptyPropsProducts: Function
 }
+
 /*--------------------------------------------*/
-const ProductFilter: FC<IProps> = ({ propsProducts, setFilterPropsProducts, setEmptyPropsProducts}) => {
+const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEmptyPropsProducts}) => {
     const [inputSearchValue, setInputSearchValue] = useState('');
     const [boolMass, setBoolMass] = useState<string[]>([]);
-    const [emptyProducts, setEmptyProducts] = useState<boolean>();
     /*---------------------------*/
     const handleEventSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputSearchValue(event.target.value)
@@ -29,26 +30,18 @@ const ProductFilter: FC<IProps> = ({ propsProducts, setFilterPropsProducts, setE
     const handleEventCategory = (event: React.ChangeEvent<HTMLInputElement>) => {
         // console.log(event.target)
     }
-    useEffect(()=>{
-        if(propsProducts){
+    useEffect(() => {
+        if (propsProducts && propsProducts.length) {
             let currentFilterProducts = propsProducts.filter(product => {
-                let bool = boolMass.length ? !boolMass.some(bool => product[bool] === false) : true;
                 let search = inputSearchValue.length ? product.name.toLowerCase().includes(inputSearchValue.toLowerCase()) : true;
+                let bool = boolMass.length ? !boolMass.some(bool => product[bool] === false) : true;
                 return search && bool && product
             });
-            if(currentFilterProducts.length >= 1){
-                setEmptyProducts(false)
-            } else{
-                setEmptyProducts(true)
-            }
-            console.log(currentFilterProducts, 'filterMass');
-            console.log(currentFilterProducts.length, 'filterMass length');
-            console.log(emptyProducts, 'boolean Filter')
-            setEmptyPropsProducts(emptyProducts);
+            const flagEmpty = currentFilterProducts.length <= 1;
+            setEmptyPropsProducts(flagEmpty)
             setFilterPropsProducts(currentFilterProducts);
         }
-    },[inputSearchValue, boolMass])
-
+    }, [inputSearchValue, boolMass])
     return (
         <div className='product-filter'>
             <div className="product-filter-title">
@@ -56,7 +49,8 @@ const ProductFilter: FC<IProps> = ({ propsProducts, setFilterPropsProducts, setE
             </div>
             <div className="product-filter-content">
                 <div className="filter-content-search">
-                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch} value={inputSearchValue}/>
+                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch}
+                               value={inputSearchValue}/>
                 </div>
                 <div className="filter-content-items">
                     <div className="filter-content-item">
