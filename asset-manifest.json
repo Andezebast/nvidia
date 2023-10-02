@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nvidia/static/css/main.18c1c032.css",
-    "main.js": "/nvidia/static/js/main.c87d7993.js",
+    "main.js": "/nvidia/static/js/main.c0067b6b.js",
     "static/media/instargam.svg": "/nvidia/static/media/instargam.da6e2ce0a25bfb53526fd58f75b88adf.svg",
     "static/media/nvidiaLogo.svg": "/nvidia/static/media/nvidiaLogo.44e4e7dde65d2ba1c696c13bacd66974.svg",
     "static/media/nvidia.svg": "/nvidia/static/media/nvidia.ebf966c1e7dd69fa84a682d2bf69f528.svg",
@@ -9,10 +9,10 @@
     "index.html": "/nvidia/index.html",
     "static/media/telegram.svg": "/nvidia/static/media/telegram.3e102005baf8d918d6e6cb85c2d57750.svg",
     "main.18c1c032.css.map": "/nvidia/static/css/main.18c1c032.css.map",
-    "main.c87d7993.js.map": "/nvidia/static/js/main.c87d7993.js.map"
+    "main.c0067b6b.js.map": "/nvidia/static/js/main.c0067b6b.js.map"
   },
   "entrypoints": [
     "static/css/main.18c1c032.css",
-    "static/js/main.c87d7993.js"
+    "static/js/main.c0067b6b.js"
   ]
 }
