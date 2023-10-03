@@ -4,6 +4,7 @@ import {fetchProducts} from "../../store/reducers/Products/ProductsAction";
 import './ProductListing.scss';
 import {NavLink} from "react-router-dom";
 import nvidia from './img/nvidia.svg';
+import badge from './img/badge.svg';
 import {motion} from "framer-motion";
 import {IProduct} from "../../models/IProduct";
 /*--------------------------------------------*/
@@ -69,7 +70,6 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
             <div className='product-listing-error'>{error}</div>
         )
     }
-    console.log(emptyPropsProducts)
     if(emptyPropsProducts){
         return(
             <div className='product-listing-empty'>There are no products matching this filter!</div>
@@ -85,6 +85,11 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                             <motion.li variants={productItem} key={index} className='product-item'>
                                 <div className='product-item-image'>
                                     <img src={product.photo} alt="product-image"/>
+                                    {product.isNew && (
+                                        <div className='badge'>
+                                            <img src={badge} alt="badge"/>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className='product-content'>
                                     <div className='product-item-name'>
@@ -123,6 +128,11 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                             <motion.li variants={productItem} key={index} className='product-item'>
                                 <div className='product-item-image'>
                                     <img src={product.photo} alt="product-image"/>
+                                    {product.isNew && (
+                                        <div className='badge'>
+                                            <img src={badge} alt="badge"/>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className='product-content'>
                                     <div className='product-item-name'>

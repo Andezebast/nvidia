@@ -16,6 +16,7 @@ interface IProps {
 const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEmptyPropsProducts}) => {
     const [inputSearchValue, setInputSearchValue] = useState('');
     const [boolMass, setBoolMass] = useState<string[]>([]);
+    const [categoryMass, setCategoryMass] = useState<string[]>([]);
     /*---------------------------*/
     const handleEventSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputSearchValue(event.target.value)
@@ -28,20 +29,26 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
         }
     }
     const handleEventCategory = (event: React.ChangeEvent<HTMLInputElement>) => {
-        // console.log(event.target)
+        if (categoryMass.indexOf(event.target.name) >= 0) {
+            setCategoryMass(categoryMass.filter(el => el !== event.target.name))
+        } else {
+            setCategoryMass([...categoryMass, event.target.name])
+        }
     }
     useEffect(() => {
+        console.log(categoryMass);
         if (propsProducts && propsProducts.length) {
             let currentFilterProducts = propsProducts.filter(product => {
                 let search = inputSearchValue.length ? product.name.toLowerCase().includes(inputSearchValue.toLowerCase()) : true;
                 let bool = boolMass.length ? !boolMass.some(bool => product[bool] === false) : true;
-                return search && bool && product
+                let category = categoryMass.length ? !categoryMass.some(category => Number(category) !== product.categories) : true;
+                return search && bool && category && product
             });
             const flagEmpty = currentFilterProducts.length <= 1;
             setEmptyPropsProducts(flagEmpty)
             setFilterPropsProducts(currentFilterProducts);
         }
-    }, [inputSearchValue, boolMass])
+    }, [inputSearchValue, boolMass, categoryMass])
     return (
         <div className='product-filter'>
             <div className="product-filter-title">

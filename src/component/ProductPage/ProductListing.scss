@@ -17,8 +17,12 @@
   .product-item {
     @apply rounded flex flex-col;
     &-image {
+      @apply relative;
       img {
-        @apply w-full h-full object-cover ;
+        @apply w-full h-full object-cover;
+      }
+      .badge{
+        @apply absolute top-2 left-2;
       }
     }
     .product-content {
