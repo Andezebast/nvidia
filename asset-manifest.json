@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/nvidia/static/css/main.18c1c032.css",
-    "main.js": "/nvidia/static/js/main.c0067b6b.js",
+    "main.css": "/nvidia/static/css/main.e12ae531.css",
+    "main.js": "/nvidia/static/js/main.836d1a5a.js",
     "static/media/instargam.svg": "/nvidia/static/media/instargam.da6e2ce0a25bfb53526fd58f75b88adf.svg",
     "static/media/nvidiaLogo.svg": "/nvidia/static/media/nvidiaLogo.44e4e7dde65d2ba1c696c13bacd66974.svg",
+    "static/media/badge.svg": "/nvidia/static/media/badge.fdc6e590a5c2c633f6b1e928164f7060.svg",
     "static/media/nvidia.svg": "/nvidia/static/media/nvidia.ebf966c1e7dd69fa84a682d2bf69f528.svg",
     "static/media/linkedin.svg": "/nvidia/static/media/linkedin.19f5b5e5c9f988e4f6c3efd677bfadd3.svg",
     "index.html": "/nvidia/index.html",
     "static/media/telegram.svg": "/nvidia/static/media/telegram.3e102005baf8d918d6e6cb85c2d57750.svg",
-    "main.18c1c032.css.map": "/nvidia/static/css/main.18c1c032.css.map",
-    "main.c0067b6b.js.map": "/nvidia/static/js/main.c0067b6b.js.map"
+    "main.e12ae531.css.map": "/nvidia/static/css/main.e12ae531.css.map",
+    "main.836d1a5a.js.map": "/nvidia/static/js/main.836d1a5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.18c1c032.css",
-    "static/js/main.c0067b6b.js"
+    "static/css/main.e12ae531.css",
+    "static/js/main.836d1a5a.js"
   ]
 }
