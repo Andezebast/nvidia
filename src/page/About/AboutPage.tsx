@@ -1,9 +1,12 @@
-import React from 'react';
-
-const AboutPage = () => {
+import React,{FC} from 'react';
+import Banner from '../../component/AboutPage/Banner/Banner';
+import Navigation from '../../component/AboutPage/Navigation/Navigation';
+/*--------------------------------------------------*/
+const AboutPage: FC = () => {
     return (
-        <div>
-            About!
+        <div className='about-page'>
+            <Banner />
+            <Navigation/>
         </div>
     );
 };

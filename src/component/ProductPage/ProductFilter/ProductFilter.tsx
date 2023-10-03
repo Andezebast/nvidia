@@ -3,7 +3,7 @@ import './ProductFilter.scss';
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
-import {IProduct} from "../../models/IProduct";
+import {IProduct} from "../../../models/IProduct";
 
 /*--------------------------------------------*/
 interface IProps {

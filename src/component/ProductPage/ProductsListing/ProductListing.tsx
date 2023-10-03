@@ -1,12 +1,12 @@
 import React, {FC, useEffect} from 'react';
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {fetchProducts} from "../../store/reducers/Products/ProductsAction";
+import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
+import {fetchProducts} from "../../../store/reducers/Products/ProductsAction";
 import './ProductListing.scss';
 import {NavLink} from "react-router-dom";
 import nvidia from './img/nvidia.svg';
 import badge from './img/badge.svg';
 import {motion} from "framer-motion";
-import {IProduct} from "../../models/IProduct";
+import {IProduct} from "../../../models/IProduct";
 /*--------------------------------------------*/
 interface IProps {
     setPropsProducts: Function,

@@ -1,0 +1,17 @@
+.navigation {
+  background-color: #1a1a1a;
+  @apply mb-5;
+  &-container {
+    @apply max-w-screen-xl m-auto;
+  }
+  &-items {
+    @apply flex items-center;
+  }
+  &-item {
+    @apply p-5 cursor-pointer;
+    border-bottom: 4px solid transparent;
+    &.active {
+      border-bottom: 4px solid #76b900;
+    }
+  }
+}
