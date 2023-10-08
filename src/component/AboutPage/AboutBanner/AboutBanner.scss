@@ -1,4 +1,4 @@
-.banner{
+.about-banner{
   @apply relative;
   &-background{
     //background-image: image-set(url('./img/geforce-rtx-40-series-new.jpeg') 1x, url('./img/geforce-rtx-40-series-new.jpeg') 2x);
@@ -14,26 +14,26 @@
     }
   }
   &-container {
-    @apply max-w-screen-xl m-auto px-5 py-20 relative z-10;
-    .banner-title{
+    @apply max-w-screen-xl m-auto px-5 py-24 relative z-10;
+    .about-banner-title{
       @apply pb-7;
       p{
         @apply text-6xl text-white font-bold;
       }
     }
-    .banner-subtitle{
+    .about-banner-subtitle{
       @apply pb-7;
       p{
         @apply text-3xl text-white font-bold;
       }
     }
-    .banner-description{
+    .about-banner-description{
       @apply max-w-md pb-10 font-normal;
       p{
         @apply text-xl;
       }
     }
-    .banner-button{
+    .about-banner-button{
       max-width: 150px;
       a{
         background-color: #76b900;

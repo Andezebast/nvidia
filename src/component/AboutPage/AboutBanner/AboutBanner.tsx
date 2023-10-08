@@ -1,22 +1,22 @@
 import React, {FC} from 'react';
 import {Link} from "react-router-dom";
-import './Banner.scss';
+import './AboutBanner.scss';
 import NvidiaBackground from './img/Nvidia RTX 4090.jpg';
 /*-------------------------------------------*/
-const Banner: FC = () => {
+const AboutBanner: FC = () => {
     return (
-        <div className='banner'>
-            <div className="banner-background">
+        <div className='about-banner'>
+            <div className="about-banner-background">
                 <img src={NvidiaBackground} alt="nvidia-background"/>
             </div>
-            <div className="banner-container">
-                <div className="banner-title">
+            <div className="about-banner-container">
+                <div className="about-banner-title">
                     <p>GeForce RTX 4090</p>
                 </div>
-                <div className="banner-subtitle">
+                <div className="about-banner-subtitle">
                     <p>MORE THAN SPEED</p>
                 </div>
-                <div className="banner-description">
+                <div className="about-banner-description">
                     <p>
                         NVIDIA® GeForce RTX™ 4090 is the best GeForce graphics card. It provides a huge leap in
                         performance, efficiency and graphics powered by artificial intelligence. Experience
@@ -26,7 +26,7 @@ const Banner: FC = () => {
                         and content authors.
                     </p>
                 </div>
-                <div className="banner-button">
+                <div className="about-banner-button">
                     <Link to='/products'>All offers</Link>
                 </div>
             </div>
@@ -34,4 +34,4 @@ const Banner: FC = () => {
     );
 };
 
-export default Banner;
+export default AboutBanner;
