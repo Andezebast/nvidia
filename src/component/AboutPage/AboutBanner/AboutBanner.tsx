@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
-import {Link} from "react-router-dom";
 import './AboutBanner.scss';
+import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 import NvidiaBackground from './img/Nvidia RTX 4090.jpg';
 /*-------------------------------------------*/
 const AboutBanner: FC = () => {
@@ -9,7 +10,20 @@ const AboutBanner: FC = () => {
             <div className="about-banner-background">
                 <img src={NvidiaBackground} alt="nvidia-background"/>
             </div>
-            <div className="about-banner-container">
+            <motion.div className="about-banner-container"
+                        initial={{
+                            opacity: 0,
+                            scale: 0.5,
+                            y: -200,
+                            x: -500
+                        }}
+                        animate={{
+                            opacity: 1,
+                            scale: 1,
+                            y: 0,
+                            x: 0
+                        }}
+                        transition={{duration: 1}}>
                 <div className="about-banner-title">
                     <p>GeForce RTX 4090</p>
                 </div>
@@ -29,7 +43,7 @@ const AboutBanner: FC = () => {
                 <div className="about-banner-button">
                     <Link to='/products'>All offers</Link>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

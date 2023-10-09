@@ -1,6 +1,10 @@
 .about-content{
   @apply max-w-screen-xl m-auto px-5 py-24;
-  /*---------------------------------------*/
+  &.full-screen{
+    background-color: #1a1a1a;
+    @apply max-w-none;
+  }
+  /*-----------Architecture------------*/
   &-architecture-title{
     @apply pb-5;
     p{
@@ -32,5 +36,96 @@
     }
 
   }
-  /*---------------------------------------*/
+  /*-----------Architecture------------*/
+  /*-----------Performance-------------*/
+  &-performance{
+    @apply max-w-screen-xl m-auto flex flex-col text-center items-center;
+    &-title{
+      @apply pb-10;
+      p{
+        @apply text-4xl text-center font-bold;
+      }
+    }
+    &-image{
+      @apply max-w-5xl;
+      img{
+        @apply w-full h-full object-cover;
+      }
+    }
+    &-subtitle{
+      @apply pb-7 pt-5;
+      p{
+        @apply text-base font-bold;
+      }
+    }
+    &-description{
+      p{
+        color: rgb(170,170,170);
+        @apply max-w-2xl text-xs;
+      }
+    }
+  }
+  /*-----------Performance-------------*/
+  /*----------------RTX----------------*/
+  &-rtx-title{
+    @apply pb-10;
+    p{
+      @apply text-4xl text-center font-bold;
+    }
+  }
+  &-rtx-items{
+    @apply grid grid-cols-2 gap-x-8 gap-y-16;
+  }
+  &-rtx-item{
+    @apply flex flex-col;
+    &-image{
+      img{
+        @apply w-full h-full object-cover;
+      }
+    }
+    &-title{
+      @apply pt-8 mb-2.5 overflow-hidden line-clamp-1;
+      p{
+        @apply text-3xl font-bold;
+      }
+    }
+    &-description{
+      @apply flex-grow;
+      p{
+        @apply text-base font-normal py-2.5;
+      }
+    }
+    &-text{
+      p{
+        @apply text-base font-normal py-2.5;
+        span{
+          @apply font-bold;
+        }
+      }
+    }
+    &-link{
+      @apply pt-5;
+      a{
+        @apply inline-block relative text-lg font-bold;
+        svg{
+          @apply absolute translate-y-2/4;
+          right: -25px;
+          top: -12%;
+          transition: 0.5s ease;
+          g{
+            transition: 0.5s ease;
+          }
+        }
+        &:hover{
+          svg{
+            right: -30px;
+            g{
+              @apply fill-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*----------------RTX----------------*/
 }
