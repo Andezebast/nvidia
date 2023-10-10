@@ -1,0 +1,48 @@
+.news-page-items{
+  @apply grid gap-10;
+}
+.news-page-item{
+  @apply flex justify-between;
+  &-image{
+    width: calc(35% - 10px);
+    img{
+      @apply w-full h-full object-contain;
+    }
+  }
+  &-content{
+    width: calc(65% - 10px);
+    &-subtitle{
+      p{
+        color: #999;
+        @apply text-sm font-bold;
+      }
+    }
+    &-title{
+      @apply py-5;
+      p{
+        @apply text-2xl font-bold;
+      }
+    }
+    &-links{
+      @apply flex
+    }
+    &-link{
+      @apply pr-2;
+      a{
+        color: #999;
+        @apply transition ease-in duration-300;
+      }
+      &:hover{
+        a{
+          color: #76b900;
+        }
+      }
+    }
+    &-description{
+      @apply pt-5;
+      p{
+        @apply text-base font-normal leading-6;
+      }
+    }
+  }
+}
