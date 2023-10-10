@@ -1,12 +1,16 @@
 import React, {FC} from 'react';
+import ReactPlayer from "react-player";
 import './AboutContent.scss';
 import {motion} from "framer-motion";
+/*-------------------------------*/
 import NvidiaArchitecture from './img/nvidia-architecture.jpg';
 import NvidiaPerformance from './img/nvidia-performance.png';
 import Witcher from './img/witcher.jpeg';
 import Cyberpunk from './img/cyberpunk2077.jpeg';
 import AlanAwake from './img/alan-awake-2.jpeg';
 import DiabloIV from './img/diablo-iv.jpeg';
+import NvidiaDLSSBackground from './img/nvidia-dlss-background.jpg';
+import NvidiaReflexBackground from './img/nvidia-reflex-background.jpg';
 import Arrow from './svg/Arrow';
 /*-------------------------------*/
 const container = {
@@ -27,10 +31,12 @@ const item = {
         opacity: 1
     }
 };
+
 /*-------------------------------*/
 interface IProps {
     activeTab: string
 }
+
 /*-------------------------------*/
 const AboutContent: FC<IProps> = ({activeTab}) => {
     /*-------------------------*/
@@ -224,7 +230,8 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
                             </div>
                             <div className="about-content-rtx-item-text">
                                 <p>
-                                    <span>Technologies:</span> DLSS 3, DLSS 2, Reflex and ray tracing (in future updates).
+                                    <span>Technologies:</span> DLSS 3, DLSS 2, Reflex and ray tracing (in future
+                                    updates).
                                 </p>
                             </div>
                             <div className="about-content-rtx-item-link">
@@ -239,11 +246,79 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
             )
         case 'DLSS':
             return (
-                <div className='about-content'>DLSS</div>
+                <div className='about-content dlss'>
+                    <motion.div className="about-content-dlss-background"
+                                key='dlss-background'
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                transition={{duration: 1}}>
+                        <img src={NvidiaDLSSBackground} alt="about-dlss-background"/>
+                    </motion.div>
+                    <motion.div className="about-content-dlss"
+                                key='dlss-content'
+                                initial={{opacity: 0, scale: 0.5, bottom: -200}}
+                                animate={{opacity: 1, scale: 1, bottom: 0}}
+                                transition={{duration: 0.8, delay: 1}}>
+                        <div className="about-content-dlss-subtitle">
+                            <p>NVIDIA DLSS 3</p>
+                        </div>
+                        <div className="about-content-dlss-title">
+                            <p>Maximum FPS and quality using AI</p>
+                        </div>
+                        <div className="about-content-dlss-description">
+                            <p>
+                                DLSS technology is a true revolution in AI-powered graphics that improves performance
+                                exponentially. Relying on the new fourth-generation Tensor Cores and optical flow
+                                accelerator in GeForce RTX 40 GPUs, DLSS 3 technology uses artificial intelligence to
+                                create additional frames and improve image quality.
+                            </p>
+                        </div>
+                        <ReactPlayer
+                            url="https://www.youtube.com/watch?v=QGI8EIgf8Y8&t=1s"
+                            width="850px"
+                            height="480px"
+                            controls
+                        />
+                        <div className="about-content-dlss-under-text">
+                            <p>
+                                *Shot using GeForce RTX 4090 at 3840 x 2160 with maximum gaming settings and RT
+                                Overdrive.
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
             )
         case 'Reflex':
             return (
-                <div className='about-content'>Reflex</div>
+                <div className='about-content reflex'>
+                    <motion.div className="about-content-reflex-background"
+                                key='reflex-background'
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                transition={{duration: 1}}>
+                        <img src={NvidiaReflexBackground} alt="about-reflex-background"/>
+                    </motion.div>
+                    <motion.div className="about-content-reflex"
+                                key='reflex-content'
+                                initial={{opacity: 0, scale: 0.5, bottom: -200}}
+                                animate={{opacity: 1, scale: 1, bottom: 0}}
+                                transition={{duration: 0.8, delay: 1}}>
+                        <div className="about-content-reflex-subtitle">
+                            <p>NVIDIA Reflex</p>
+                        </div>
+                        <div className="about-content-reflex-title">
+                            <p>Milliseconds determine victory.</p>
+                        </div>
+                        <div className="about-content-reflex-description">
+                            <p>
+                                GeForce RTX 40 and NVIDIA Reflex deliver lower latency and more responsive controls,
+                                giving you an edge over your competitors. Designed to optimize and measure system
+                                latency, Reflex technology delivers faster aiming, faster reaction times and maximizes
+                                accuracy in competitive gaming.
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
             )
         default:
             return (

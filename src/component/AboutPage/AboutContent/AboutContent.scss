@@ -4,6 +4,10 @@
     background-color: #1a1a1a;
     @apply max-w-none;
   }
+  &.dlss,
+  &.reflex{
+    @apply max-w-none p-0 relative;
+  }
   /*-----------Architecture------------*/
   &-architecture-title{
     @apply pb-5;
@@ -67,60 +71,62 @@
   }
   /*-----------Performance-------------*/
   /*----------------RTX----------------*/
-  &-rtx-title{
-    @apply pb-10;
-    p{
-      @apply text-4xl text-center font-bold;
-    }
-  }
-  &-rtx-items{
-    @apply grid grid-cols-2 gap-x-8 gap-y-16;
-  }
-  &-rtx-item{
-    @apply flex flex-col;
-    &-image{
-      img{
-        @apply w-full h-full object-cover;
-      }
-    }
+  &-rtx{
     &-title{
-      @apply pt-8 mb-2.5 overflow-hidden line-clamp-1;
+      @apply pb-10;
       p{
-        @apply text-3xl font-bold;
+        @apply text-4xl text-center font-bold;
       }
     }
-    &-description{
-      @apply flex-grow;
-      p{
-        @apply text-base font-normal py-2.5;
-      }
+    &-items{
+      @apply grid grid-cols-2 gap-x-8 gap-y-16;
     }
-    &-text{
-      p{
-        @apply text-base font-normal py-2.5;
-        span{
-          @apply font-bold;
+    &-item{
+      @apply flex flex-col;
+      &-image{
+        img{
+          @apply w-full h-full object-cover;
         }
       }
-    }
-    &-link{
-      @apply pt-5;
-      a{
-        @apply inline-block relative text-lg font-bold;
-        svg{
-          @apply absolute translate-y-2/4;
-          right: -25px;
-          top: -12%;
-          transition: 0.5s ease;
-          g{
-            transition: 0.5s ease;
+      &-title{
+        @apply pt-8 mb-2.5 overflow-hidden line-clamp-1;
+        p{
+          @apply text-3xl font-bold;
+        }
+      }
+      &-description{
+        @apply flex-grow;
+        p{
+          @apply text-base font-normal py-2.5;
+        }
+      }
+      &-text{
+        p{
+          @apply text-base font-normal py-2.5;
+          span{
+            @apply font-bold;
           }
         }
-        &:hover{
+      }
+      &-link{
+        @apply pt-5;
+        a{
+          @apply inline-block relative text-lg font-bold;
           svg{
-            right: -30px;
+            @apply absolute translate-y-2/4;
+            right: -25px;
+            top: -12%;
+            transition: 0.5s ease;
             g{
-              @apply fill-white;
+              transition: 0.5s ease;
+            }
+          }
+          &:hover{
+            svg{
+              right: -30px;
+              g{
+                @apply fill-white;
+              }
             }
           }
         }
@@ -128,4 +134,48 @@
     }
   }
   /*----------------RTX----------------*/
+  /*----------------DLLS---------------*/
+  &-dlss,
+  &-reflex{
+    @apply relative z-20 max-w-screen-xl m-auto px-5 py-24 flex flex-col text-center items-center;
+    &-background{
+      @apply absolute top-0 left-0 z-10 w-full h-full;
+      img{
+        @apply w-full h-full object-cover;
+      }
+    }
+    &-subtitle{
+      @apply pb-5;
+      p{
+        @apply text-xl font-bold;
+      }
+    }
+    &-title{
+      @apply pb-5;
+      p{
+        @apply text-4xl font-bold;
+      }
+    }
+    &-description{
+      @apply max-w-4xl pb-14;
+      p{
+        @apply text-base font-normal;
+      }
+    }
+    &-under-text{
+      @apply pt-5;
+      p{
+        color: rgb(153,153,153);
+        @apply text-xs font-normal;
+      }
+    }
+  }
+  /*----------------DLLS---------------*/
+  /*---------------Reflex--------------*/
+  &-reflex{
+    &-description{
+      @apply pb-52;
+    }
+  }
+  /*---------------Reflex--------------*/
 }
