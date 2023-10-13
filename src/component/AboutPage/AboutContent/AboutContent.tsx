@@ -31,12 +31,10 @@ const item = {
         opacity: 1
     }
 };
-
 /*-------------------------------*/
 interface IProps {
     activeTab: string
 }
-
 /*-------------------------------*/
 const AboutContent: FC<IProps> = ({activeTab}) => {
     /*-------------------------*/
