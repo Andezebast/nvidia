@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nvidia/static/css/main.4747c7fe.css",
-    "main.js": "/nvidia/static/js/main.166dc790.js",
+    "main.js": "/nvidia/static/js/main.2e3e9007.js",
     "static/media/Nvidia RTX 4090.jpg": "/nvidia/static/media/Nvidia RTX 4090.5e856fff555fbaf9c807.jpg",
     "static/media/nvidia-architecture.jpg": "/nvidia/static/media/nvidia-architecture.cd0ebcf7c394f3e09ce0.jpg",
     "static/media/nvidia-dlss-background.jpg": "/nvidia/static/media/nvidia-dlss-background.39da290f6afe89f4481d.jpg",
@@ -19,10 +19,10 @@
     "index.html": "/nvidia/index.html",
     "static/media/telegram.svg": "/nvidia/static/media/telegram.3e102005baf8d918d6e6cb85c2d57750.svg",
     "main.4747c7fe.css.map": "/nvidia/static/css/main.4747c7fe.css.map",
-    "main.166dc790.js.map": "/nvidia/static/js/main.166dc790.js.map"
+    "main.2e3e9007.js.map": "/nvidia/static/js/main.2e3e9007.js.map"
   },
   "entrypoints": [
     "static/css/main.4747c7fe.css",
-    "static/js/main.166dc790.js"
+    "static/js/main.2e3e9007.js"
   ]
 }
