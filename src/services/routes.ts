@@ -4,7 +4,7 @@ import NewsPage from "../page/News/NewsPage";
 import HomePage from "../page/Home/HomePage";
 import DriverPage from "../page/Driver/DriverPage";
 import AboutPage from "../page/About/AboutPage";
-import ShoppingCartPage from '../page/Shopping-cart/ShoppingCartPage';
+import ShoppingCartPage from '../page/ShoppingCart/ShoppingCartPage';
 
 const shoppingRoutes = {
     key: `/shopping`,

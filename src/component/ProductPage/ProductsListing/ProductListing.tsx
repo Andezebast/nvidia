@@ -7,6 +7,7 @@ import nvidia from './img/nvidia.svg';
 import badge from './img/badge.svg';
 import {motion} from "framer-motion";
 import {IProduct} from "../../../models/IProduct";
+import {ShoppingCartSlice} from '../../../store/reducers/Shopping-cart/ShoppingCartSlice';
 /*--------------------------------------------*/
 interface IProps {
     setPropsProducts: Function,
@@ -17,6 +18,7 @@ interface IProps {
 const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, emptyPropsProducts}) => {
     const dispatch = useAppDispatch();
     const {products, isLoading, error} = useAppSelector(state => state.productsReducer)
+    const shoppingCartProducts = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
     /*--------------------------------------------*/
     useEffect(() => {
         if (products) {
@@ -76,6 +78,10 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
         )
     }
     /*--------------------------------------------*/
+    const handleEventShoppingCart = (product: IProduct) => {
+        dispatch(ShoppingCartSlice.actions.AddToShoppingCart(product));
+    }
+    /*--------------------------------------------*/
     return (
         <div className='product-listing'>
             {filterPropsProducts.length > 0
@@ -106,9 +112,11 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                     {product.isInStock
                                         ? (
                                             <div className="product-item-buttons">
-                                                <NavLink className="button-detail"
-                                                         to={`/product/${product.id}`}>Detail</NavLink>
-                                                <button className="shopping-cart">Add to Shopping Cart</button>
+                                                <NavLink className="button-detail" to={`/product/${product.id}`}>Detail</NavLink>
+                                                {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === product.id) > -1
+                                                ? (<button className="shopping-cart disabled" disabled>product is already in the cart</button>)
+                                                : (<button className="shopping-cart" onClick={() => handleEventShoppingCart(product)}>Add to Shopping Cart</button>)
+                                                }
                                             </div>
                                         )
                                         : (
@@ -149,9 +157,11 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                     {product.isInStock
                                         ? (
                                             <div className="product-item-buttons">
-                                                <NavLink className="button-detail"
-                                                         to={`/product/${product.id}`}>Detail</NavLink>
-                                                <button className="shopping-cart">Add to Shopping Cart</button>
+                                                <NavLink className="button-detail" to={`/product/${product.id}`}>Detail</NavLink>
+                                                {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === product.id) > -1
+                                                    ? (<button className="shopping-cart disabled" disabled>Already in Shopping Cart</button>)
+                                                    : (<button className="shopping-cart" onClick={() => handleEventShoppingCart(product)}>Add to Shopping Cart</button>)
+                                                }
                                             </div>
                                         )
                                         : (

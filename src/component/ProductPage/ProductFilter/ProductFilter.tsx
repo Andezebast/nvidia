@@ -36,7 +36,6 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
         }
     }
     useEffect(() => {
-        console.log(categoryMass);
         if (propsProducts && propsProducts.length) {
             let currentFilterProducts = propsProducts.filter(product => {
                 let search = inputSearchValue.length ? product.name.toLowerCase().includes(inputSearchValue.toLowerCase()) : true;

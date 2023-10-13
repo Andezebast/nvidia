@@ -9,6 +9,7 @@ export interface IProduct{
     isNew: boolean,
     isSale: boolean,
     isInStock: boolean,
+    inShoppingCart: boolean,
     categories: number,
     quantity: number
 }

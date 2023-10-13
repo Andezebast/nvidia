@@ -11,6 +11,7 @@ const AboutBanner: FC = () => {
                 <img src={NvidiaBackground} alt="nvidia-background"/>
             </div>
             <motion.div className="about-banner-container"
+                        key='about-banner'
                         initial={{
                             opacity: 0,
                             scale: 0.5,

@@ -58,6 +58,10 @@
         .shopping-cart {
           border: 3px solid #76b900;
           @apply p-1 duration-500;
+          &.disabled{
+            opacity: 0.5;
+            pointer-events: none;
+          }
           &:hover {
             background-color: #76b900;
             border-color: transparent;

@@ -130,6 +130,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
                     </div>
                     <motion.ul
                         className="about-content-rtx-items"
+                        key='rtx-list'
                         variants={container}
                         initial="hidden"
                         animate="visible">

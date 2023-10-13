@@ -8,7 +8,7 @@ const Header = () => {
         <div className='header'>
             <div className="header-container">
                 <Link to='/' className="header-container-img">
-                    <img src={nvidiaLogo} alt="logo"/>
+                    <img src={nvidiaLogo} alt="nvidiaLogo"/>
                 </Link>
                 <div className="header-container-links">
                     <NavLink className="header-link" to='/about'>About page</NavLink>
