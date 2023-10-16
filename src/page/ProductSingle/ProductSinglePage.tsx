@@ -6,7 +6,6 @@ import './ProductSinglePage.scss';
 const ProductSinglePage = () => {
     const pageId = useParams();
     const id = pageId.id;
-    console.log(id)
     const dispatch = useAppDispatch();
     const {product, isLoading, error} = useAppSelector(state => state.productReducer);
     useEffect(() => {

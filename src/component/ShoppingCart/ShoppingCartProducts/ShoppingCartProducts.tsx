@@ -1,7 +1,9 @@
 import React, {FC} from 'react';
 import './ShoppingCartProducts.scss';
-import {useAppSelector} from '../../../hooks/redux';
+import {useAppSelector, useAppDispatch} from '../../../hooks/redux';
 import {motion} from "framer-motion";
+import {IProduct} from "../../../models/IProduct";
+import {ShoppingCartSlice} from '../../../store/reducers/Shopping-cart/ShoppingCartSlice';
 /*-------------------------------------*/
 const shoppingCartProductItems = {
     hidden: {opacity: 1, scale: 0},
@@ -24,6 +26,25 @@ const shoppingCartProductItem = {
 /*-------------------------------------*/
 const ShoppingCartProducts: FC = () => {
     const shoppingCartProducts = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
+    const dispatch = useAppDispatch();
+    /*-------------------------------------*/
+    const handleDeleteEvent = (product: IProduct) => {
+        dispatch(ShoppingCartSlice.actions.RemoveFromShoppingCart(product))
+        console.log(shoppingCartProducts)
+    }
+    const handleMinusEvent = (id: string) => {
+        dispatch(ShoppingCartSlice.actions.quantityShoppingCart({
+            id: id,
+            action: 'minus'
+        }))
+    }
+    const handlePlusEvent = (id: string) => {
+        dispatch(ShoppingCartSlice.actions.quantityShoppingCart({
+            id: id,
+            action: 'plus'
+        }))
+    }
+    /*-------------------------------------*/
     return (
         <motion.ul className='shopping-cart-products' variants={shoppingCartProductItems} initial="hidden" animate="visible">
             {shoppingCartProducts.length
@@ -42,11 +63,11 @@ const ShoppingCartProducts: FC = () => {
                                     : <p>{product.price}</p>}
                             </div>
                             <div className="shopping-cart-product-content-quantity">
-                                <div className="shopping-cart-quantity-minus">-</div>
+                                <div className="shopping-cart-quantity-minus" onClick={() => handleMinusEvent(product.id)}>-</div>
                                 <div className="shopping-cart-quantity-number">{product.quantity}</div>
-                                <div className="shopping-cart-quantity-plus">+</div>
+                                <div className="shopping-cart-quantity-plus" onClick={() => handlePlusEvent(product.id)}>+</div>
                             </div>
-                            <div className="shopping-cart-product-content-close">
+                            <div className="shopping-cart-product-content-close" onClick={() => handleDeleteEvent(product)}>
                                 <div>
                                     <span></span>
                                     <span></span>
