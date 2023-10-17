@@ -6,11 +6,8 @@
   /*-----------------------------*/
   &-loading {
     @apply flex items-center flex-col col-start-2 col-end-4;
-    p {
-      @apply pb-4 text-4xl;
-    }
-    img {
-      max-width: 200px;
+    svg {
+      max-width: 100px;
     }
   }
   /*-----------------------------*/

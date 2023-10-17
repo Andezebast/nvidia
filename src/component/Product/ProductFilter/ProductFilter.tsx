@@ -50,9 +50,6 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
     }, [inputSearchValue, boolMass, categoryMass])
     return (
         <div className='product-filter'>
-            <div className="product-filter-title">
-                Filter
-            </div>
             <div className="product-filter-content">
                 <div className="filter-content-search">
                     <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch}

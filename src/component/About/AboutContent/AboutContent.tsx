@@ -11,7 +11,7 @@ import AlanAwake from './img/alan-awake-2.jpeg';
 import DiabloIV from './img/diablo-iv.jpeg';
 import NvidiaDLSSBackground from './img/nvidia-dlss-background.jpg';
 import NvidiaReflexBackground from './img/nvidia-reflex-background.jpg';
-import Arrow from './svg/Arrow';
+import Arrow from '../../../svg/Arrow';
 /*-------------------------------*/
 const container = {
     hidden: {opacity: 1, scale: 0},

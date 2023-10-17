@@ -76,9 +76,9 @@ const ShoppingCartProducts: FC = () => {
                         </div>
                     </motion.li>
                 )))
-                : (<div className='shopping-cart-empty'>
-                    <p>Shopping cart is Empty!</p>
-                </div>)
+                : (<motion.ul className='shopping-cart-empty' variants={shoppingCartProductItems} initial="hidden" animate="visible">
+                    <motion.li variants={shoppingCartProductItem}>Shopping cart is Empty!</motion.li>
+                </motion.ul>)
             }
         </motion.ul>
     );

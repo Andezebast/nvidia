@@ -1,11 +1,12 @@
 import React from 'react';
 import './footer.scss';
 import {Link} from 'react-router-dom';
-import instagram from './img/instargam.svg';
-import linkedin from './img/linkedin.svg';
-import telegram from './img/telegram.svg';
-import nvidiaLogo from './img/nvidiaLogo.svg';
-
+/*------------------------------------------*/
+import Instagram from '../../svg/Instagram';
+import Telegram from '../../svg/Telegram';
+import Linkedin from '../../svg/Linkedin';
+import NvidiaLogo from '../../svg/NvidiaLogo';
+/*------------------------------------------*/
 const Footer = () => {
     return (
         <div className='footer'>
@@ -55,15 +56,15 @@ const Footer = () => {
                         </div>
                         <ul className="footer-column-links">
                             <li className="footer-column-link social">
-                                <img src={instagram} alt="linkedin"/>
+                                <Linkedin />
                                 <a href='https://www.linkedin.com/in/andezebast/' target='_blank'>linkedin</a>
                             </li>
                             <li className="footer-column-link social">
-                                <img src={linkedin} alt="instagram"/>
+                                <Instagram />
                                 <a href='https://www.instagram.com/_lazarev_andrey/' target='_blank'>Instagram</a>
                             </li>
                             <li className="footer-column-link social">
-                                <img src={telegram} alt="telegram"/>
+                                <Telegram/>
                                 <a href='https://t.me/Laz_Andrey' target='_blank'>Telegram</a>
                             </li>
                         </ul>
@@ -72,7 +73,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="footer-bottom-logo">
-                    <img src={nvidiaLogo} alt="footer-logo"/>
+                    <NvidiaLogo />
                 </div>
                 <div className="footer-bottom-description">
                     <a href='/'>Положение о конфиденциальности</a>

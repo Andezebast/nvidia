@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react';
 import './ProductsPage.scss';
-import ProductFilter from '../../component/ProductPage/ProductFilter/ProductFilter';
-import ProductListing from '../../component/ProductPage/ProductsListing/ProductListing';
+import ProductFilter from '../../component/Product/ProductFilter/ProductFilter';
+import ProductListing from '../../component/Product/ProductListing/ProductListing';
 import {IProduct} from "../../models/IProduct";
 /*---------------------------------------------*/
 type IPropsProducts = IProduct[] | [];

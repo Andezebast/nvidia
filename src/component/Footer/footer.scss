@@ -23,7 +23,7 @@
           }
         }
         .footer-column-link.social{
-          @apply flex text-center;
+          @apply flex items-center;
           a{
             @apply pl-2 py-1.5;
           }

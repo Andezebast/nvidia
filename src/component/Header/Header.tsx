@@ -1,8 +1,9 @@
 import React from 'react';
-import nvidiaLogo from './img/nvidiaLogo.svg';
 import './header.scss';
 import {Link, NavLink} from "react-router-dom";
 import {useAppSelector} from '../../hooks/redux';
+import NvidiaLogo from "../../svg/NvidiaLogo";
+/*-----------------------------------------*/
 const Header = () => {
     const shoppingCartLength = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
     /*-----------------------------------------*/
@@ -10,7 +11,7 @@ const Header = () => {
         <div className='header'>
             <div className="header-container">
                 <Link to='/' className="header-container-img">
-                    <img src={nvidiaLogo} alt="nvidiaLogo"/>
+                    <NvidiaLogo />
                 </Link>
                 <div className="header-container-links">
                     <NavLink className="header-link" to='/about'>About page</NavLink>

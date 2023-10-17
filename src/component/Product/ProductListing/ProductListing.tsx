@@ -1,13 +1,14 @@
 import React, {FC, useEffect} from 'react';
+import './ProductListing.scss';
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {fetchProducts} from "../../../store/reducers/Products/ProductsAction";
-import './ProductListing.scss';
 import {NavLink} from "react-router-dom";
-import nvidia from './img/nvidia.svg';
-import badge from './img/badge.svg';
 import {motion} from "framer-motion";
 import {IProduct} from "../../../models/IProduct";
 import {ShoppingCartSlice} from '../../../store/reducers/Shopping-cart/ShoppingCartSlice';
+/*--------------------------------------------*/
+import Badge from '../../../svg/Badge';
+import Loading from '../../../svg/Loading';
 /*--------------------------------------------*/
 interface IProps {
     setPropsProducts: Function,
@@ -52,7 +53,6 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
     if (isLoading) {
         return (
             <div className='product-listing-loading'>
-                <p>isLoading...</p>
                 <motion.div
                     animate={{
                         rotate: 360,
@@ -62,7 +62,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                         ease: "linear",
                         repeat: Infinity,
                     }}>
-                    <img src={nvidia} alt="loading image"/>
+                    <Loading />
                 </motion.div>
             </div>
         )
@@ -93,7 +93,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                     <img src={product.photo} alt="product-image"/>
                                     {product.isNew && (
                                         <div className='badge'>
-                                            <img src={badge} alt="badge"/>
+                                            <Badge />
                                         </div>
                                     )}
                                 </div>
@@ -138,7 +138,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                     <img src={product.photo} alt="product-image"/>
                                     {product.isNew && (
                                         <div className='badge'>
-                                            <img src={badge} alt="badge"/>
+                                            <Badge />
                                         </div>
                                     )}
                                 </div>

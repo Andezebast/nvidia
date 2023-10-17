@@ -5,6 +5,14 @@ import HomePage from "../page/Home/HomePage";
 import DriverPage from "../page/Driver/DriverPage";
 import AboutPage from "../page/About/AboutPage";
 import ShoppingCartPage from '../page/ShoppingCart/ShoppingCartPage';
+import CheckoutLoginPage from '../page/Checkout/CheckoutLogin/CheckoutLoginPage';
+
+const checkoutLoginRoutes = {
+    key: '/checkoutLogin',
+    path: '/checkoutLogin',
+    component: CheckoutLoginPage,
+    exact: true,
+}
 
 const shoppingRoutes = {
     key: `/shopping`,
@@ -56,5 +64,6 @@ export const routes = [
     newsRoutes,
     homeRoutes,
     driverRoutes,
-    shoppingRoutes
+    shoppingRoutes,
+    checkoutLoginRoutes
 ]

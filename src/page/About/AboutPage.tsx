@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react';
-import AboutBanner from '../../component/AboutPage/AboutBanner/AboutBanner';
-import Navigation from '../../component/AboutPage/AboutNavigation/AboutNavigation';
-import AboutContent from "../../component/AboutPage/AboutContent/AboutContent";
+import AboutBanner from '../../component/About/AboutBanner/AboutBanner';
+import Navigation from '../../component/About/AboutNavigation/AboutNavigation';
+import AboutContent from "../../component/About/AboutContent/AboutContent";
 /*--------------------------------------------------*/
 const AboutPage: FC = () => {
     const [activeTab, setActiveTab] = useState<string>('Architecture');

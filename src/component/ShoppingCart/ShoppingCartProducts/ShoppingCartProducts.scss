@@ -1,6 +1,10 @@
 .shopping-cart-products{
   width: calc(70% - 20px);
   @apply flex flex-col gap-8;
+  .shopping-cart-empty{
+    @apply text-center text-2xl;
+    color: #76b900;
+  }
 }
 .shopping-cart-product{
   @apply flex justify-between;
