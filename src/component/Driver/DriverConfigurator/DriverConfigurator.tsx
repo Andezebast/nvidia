@@ -1,10 +1,15 @@
 import React, {FC} from 'react';
 import './DriverConfigurator.scss';
 /*-------------------------------*/
-const DriverConfigurator:FC = () => {
+import DriverConfiguratorList from "./DriverConfiguratorList/DriverConfiguratorList";
+import DriverConfiguratorSearch from "./DriverConfiguratorSearch/DriverConfiguratorSearch";
+/*-------------------------------*/
+const DriverConfigurator: FC = () => {
+    /*-------------------------------*/
     return (
-        <div>
-            Driver Configurator!
+        <div className='driver-page-configurator'>
+            <DriverConfiguratorList />
+            <DriverConfiguratorSearch />
         </div>
     );
 };

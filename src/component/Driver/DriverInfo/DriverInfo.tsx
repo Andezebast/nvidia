@@ -3,7 +3,7 @@ import './DriverInfo.scss';
 /*-------------------------------*/
 const DriverInfo:FC = () => {
     return (
-        <div>
+        <div className='driver-page-info'>
             Driver Info!
         </div>
     );

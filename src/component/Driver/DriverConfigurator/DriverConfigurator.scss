@@ -1,0 +1,9 @@
+.driver-page-configurator{
+  @apply flex justify-between;
+  &-list{
+    width: calc(60% - 20px);
+  }
+  &-search{
+    width: calc(40% - 20px);
+  }
+}

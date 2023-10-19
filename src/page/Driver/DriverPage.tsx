@@ -7,11 +7,11 @@ import DriverConfigurator from '../../component/Driver/DriverConfigurator/Driver
 const DriverPage: FC = () => {
     return (
         <div className='driver-page container'>
-            <div className="diver-page-title">
+            <div className="driver-page-title">
                 <p>Drivers GeForce®</p>
-                <DriverConfigurator/>
-                <DriverInfo/>
             </div>
+            <DriverConfigurator/>
+            <DriverInfo/>
         </div>
     );
 };
