@@ -45,8 +45,8 @@ const newsRoutes = {
     exact: true,
 };
 const homeRoutes = {
-    key: `/home`,
-    path: '/',
+    key: `/nvidia`,
+    path: '/nvidia',
     component: HomePage,
     exact: true,
 };
