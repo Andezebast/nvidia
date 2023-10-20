@@ -1,25 +1,38 @@
 import React, {FC, useState} from 'react';
 import './DriverConfiguratorSearch.scss';
 import {SubmitHandler, useForm} from "react-hook-form";
+import {useAppDispatch} from "../../../../hooks/redux";
+import {fetchDriver} from "../../../../store/reducers/Driver/DriverAction";
 /*-----------------------------------------*/
+interface IButtonSearchBoll{
+    setButtonSearchBull: Function,
+}
 type Configurator = {
-    example: string,
-    exampleRequired: string,
+    product: string,
+    series: string,
+    model: string,
+    OS: string
 };
-const DriverConfiguratorSearch: FC = () => {
+/*-----------------------------------------*/
+const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) => {
     const [geForce, setGeForce] = useState<boolean>(true);
     const [rtx20, setRtx20] = useState<boolean>(true);
     const [rtx30, setRtx30] = useState<boolean>(false);
     const [rtx40, setRtx40] = useState<boolean>(false);
     /*-------------------------------*/
-    const {handleSubmit} = useForm<Configurator>();
+    const dispatch = useAppDispatch();
+    /*-------------------------------*/
+    const {handleSubmit, register} = useForm<Configurator>();
     const onSubmit: SubmitHandler<Configurator> = (data) => {
-        console.log(data);
+        dispatch(fetchDriver(data))
     }
     /*-------------------------------*/
     const handleChangeEvent = (event: React.ChangeEvent<HTMLSelectElement>) => {
         if (event.target.value === 'GeForce') {
             setGeForce(true)
+            setRtx20(true)
+            setRtx30(false)
+            setRtx40(false)
         } else {
             setGeForce(false)
         }
@@ -43,6 +56,9 @@ const DriverConfiguratorSearch: FC = () => {
                 break;
         }
     }
+    const handleEventButtonForm = () => {
+        setButtonSearchBull(true)
+    }
     /*-------------------------------*/
     return (
         <div className="driver-page-configurator-search">
@@ -55,7 +71,7 @@ const DriverConfiguratorSearch: FC = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="driver-configurator-search-form">
                 <div className="search-form-selector">
                     <p>Product: </p>
-                    <select name="product" id="product" onChange={handleChangeEvent}>
+                    <select {...register('product')} id="product" onChange={handleChangeEvent} >
                         <option value="GeForce">GeForce</option>
                         <option value="TITAN">TITAN</option>
                     </select>
@@ -64,14 +80,14 @@ const DriverConfiguratorSearch: FC = () => {
                     <p>Series: </p>
                     {geForce
                         ? (
-                            <select name="series" id="series" onChange={handleChangeRTXEvent}>
+                            <select {...register('series')} id="series" onChange={handleChangeRTXEvent}>
                                 <option value="GeForce RTX 20 Series">GeForce RTX 20 Series</option>
                                 <option value="GeForce RTX 30 Series">GeForce RTX 30 Series</option>
                                 <option value="GeForce RTX 40 Series">GeForce RTX 40 Series</option>
                             </select>
                         )
                         : (
-                            <select name="series" id="series">
+                            <select {...register('series')} id="series">
                                 <option value="NVIDIA TITAN Series">NVIDIA TITAN Series</option>
                             </select>
                         )
@@ -83,14 +99,14 @@ const DriverConfiguratorSearch: FC = () => {
                         ? (
                             <>
                                 {rtx20 && (
-                                    <select name="model" id="model">
+                                    <select {...register('model')} id="model">
                                         <option value="NVIDIA GeForce RTX 2080">NVIDIA GeForce RTX 2080</option>
                                         <option value="NVIDIA GeForce RTX 2070">NVIDIA GeForce RTX 2070</option>
                                         <option value="NVIDIA GeForce RTX 2060">NVIDIA GeForce RTX 2060</option>
                                     </select>
                                 )}
                                 {rtx30 && (
-                                    <select name="model" id="model">
+                                    <select {...register('model')} id="model">
                                         <option value="NVIDIA GeForce RTX 3090">NVIDIA GeForce RTX 3090</option>
                                         <option value="NVIDIA GeForce RTX 3080">NVIDIA GeForce RTX 3080</option>
                                         <option value="NVIDIA GeForce RTX 3070">NVIDIA GeForce RTX 3070</option>
@@ -98,7 +114,7 @@ const DriverConfiguratorSearch: FC = () => {
                                     </select>
                                 )}
                                 {rtx40 && (
-                                    <select name="model" id="model">
+                                    <select {...register('model')} id="model">
                                         <option value="NVIDIA GeForce RTX 4090">NVIDIA GeForce RTX 4090</option>
                                         <option value="NVIDIA GeForce RTX 4080">NVIDIA GeForce RTX 4080</option>
                                         <option value="NVIDIA GeForce RTX 4070">NVIDIA GeForce RTX 4070</option>
@@ -107,7 +123,7 @@ const DriverConfiguratorSearch: FC = () => {
                                 )}
                             </>)
                         : (
-                            <select name="model" id="model">
+                            <select {...register('model')} id="model">
                                 <option value="NVIDIA TITAN V">NVIDIA TITAN V</option>
                                 <option value="NVIDIA TITAN Xp">NVIDIA TITAN Xp</option>
                                 <option value="NVIDIA TITAN X">NVIDIA TITAN X</option>
@@ -118,7 +134,19 @@ const DriverConfiguratorSearch: FC = () => {
                         )
                     }
                 </div>
-                <button type="submit">To Start Searching</button>
+                <div className="search-form-selector">
+                    <p>Operating System: </p>
+                    <select {...register('OS')} id="OS">
+                        <option value="Windows 11">Windows 11</option>
+                        <option value="Windows 10">Windows 10</option>
+                        <option value="Linux Aarch64">Linux Aarch64</option>
+                        <option value="Linux 64-Bit">Linux 64-Bit</option>
+                        <option value="FreeBSD X64">FreeBSD X64</option>
+                    </select>
+                </div>
+                <div className="search-form-button">
+                    <button type="submit" onClick={handleEventButtonForm}>To Start Searching</button>
+                </div>
             </form>
         </div>
     );

@@ -3,10 +3,13 @@ import {configureStore} from "@reduxjs/toolkit";
 import productsReducer from '../store/reducers/Products/ProductsSlice';
 import productReducer from "../store/reducers/Product/ProductSlice";
 import shoppingCartProductReducer from '../store/reducers/Shopping-cart/ShoppingCartSlice';
+import driverReducer from '../store/reducers/Driver/DriverSlice';
+
 const rootReducer = combineReducers({
     productsReducer,
     productReducer,
-    shoppingCartProductReducer
+    shoppingCartProductReducer,
+    driverReducer
 })
 
 export const setupStore = () =>{

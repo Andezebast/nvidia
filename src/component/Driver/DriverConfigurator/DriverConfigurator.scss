@@ -1,9 +1,12 @@
 .driver-page-configurator{
   @apply flex justify-between;
   &-list{
-    width: calc(60% - 20px);
+    width: calc(55% - 20px);
+    @apply py-8;
   }
   &-search{
-    width: calc(40% - 20px);
+    width: calc(45% - 20px);
+    border-left: 3px solid #616161;
+    @apply py-8 pl-4;
   }
 }
