@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className='header'>
             <div className="header-container">
-                <Link to='/' className="header-container-img">
+                <Link to='/nvidia' className="header-container-img">
                     <NvidiaLogo />
                 </Link>
                 <div className="header-container-links">
