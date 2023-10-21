@@ -114,7 +114,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                             <div className="product-item-buttons">
                                                 <NavLink className="button-detail" to={`/product/${product.id}`}>Detail</NavLink>
                                                 {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === product.id) > -1
-                                                ? (<button className="shopping-cart disabled" disabled>product is already in the cart</button>)
+                                                ? (<button className="shopping-cart disabled" disabled>Already in the cart</button>)
                                                 : (<button className="shopping-cart" onClick={() => handleEventShoppingCart(product)}>Add to Shopping Cart</button>)
                                                 }
                                             </div>

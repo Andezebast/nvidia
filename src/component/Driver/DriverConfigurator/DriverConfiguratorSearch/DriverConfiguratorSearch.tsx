@@ -100,25 +100,25 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                             <>
                                 {rtx20 && (
                                     <select {...register('model')} id="model">
-                                        <option value="NVIDIA GeForce RTX 2080">NVIDIA GeForce RTX 2080</option>
-                                        <option value="NVIDIA GeForce RTX 2070">NVIDIA GeForce RTX 2070</option>
                                         <option value="NVIDIA GeForce RTX 2060">NVIDIA GeForce RTX 2060</option>
+                                        <option value="NVIDIA GeForce RTX 2070">NVIDIA GeForce RTX 2070</option>
+                                        <option value="NVIDIA GeForce RTX 2080">NVIDIA GeForce RTX 2080</option>
                                     </select>
                                 )}
                                 {rtx30 && (
                                     <select {...register('model')} id="model">
-                                        <option value="NVIDIA GeForce RTX 3090">NVIDIA GeForce RTX 3090</option>
-                                        <option value="NVIDIA GeForce RTX 3080">NVIDIA GeForce RTX 3080</option>
-                                        <option value="NVIDIA GeForce RTX 3070">NVIDIA GeForce RTX 3070</option>
                                         <option value="NVIDIA GeForce RTX 3060">NVIDIA GeForce RTX 3060</option>
+                                        <option value="NVIDIA GeForce RTX 3070">NVIDIA GeForce RTX 3070</option>
+                                        <option value="NVIDIA GeForce RTX 3080">NVIDIA GeForce RTX 3080</option>
+                                        <option value="NVIDIA GeForce RTX 3090">NVIDIA GeForce RTX 3090</option>
                                     </select>
                                 )}
                                 {rtx40 && (
                                     <select {...register('model')} id="model">
-                                        <option value="NVIDIA GeForce RTX 4090">NVIDIA GeForce RTX 4090</option>
-                                        <option value="NVIDIA GeForce RTX 4080">NVIDIA GeForce RTX 4080</option>
-                                        <option value="NVIDIA GeForce RTX 4070">NVIDIA GeForce RTX 4070</option>
                                         <option value="NVIDIA GeForce RTX 4060">NVIDIA GeForce RTX 4060</option>
+                                        <option value="NVIDIA GeForce RTX 4070">NVIDIA GeForce RTX 4070</option>
+                                        <option value="NVIDIA GeForce RTX 4080">NVIDIA GeForce RTX 4080</option>
+                                        <option value="NVIDIA GeForce RTX 4090">NVIDIA GeForce RTX 4090</option>
                                     </select>
                                 )}
                             </>)
