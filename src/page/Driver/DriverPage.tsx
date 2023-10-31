@@ -1,18 +1,22 @@
 import React, {FC} from 'react';
 import './DriverPage.scss';
+import {motion} from "framer-motion";
 /*-------------------------*/
 import DriverInfo from '../../component/Driver/DriverInfo/DriverInfo';
 import DriverConfigurator from '../../component/Driver/DriverConfigurator/DriverConfigurator';
 /*-------------------------*/
 const DriverPage: FC = () => {
     return (
-        <div className='driver-page container'>
+        <motion.div className='driver-page container'
+                    initial={{opacity: 0, scale: 0.5, y: 500}}
+                    animate={{opacity: 1, scale: 1, y: 0}}
+                    transition={{duration: 1, delay: 0.5}}>
             <div className="driver-page-title">
                 <p>Drivers GeForce®</p>
             </div>
             <DriverConfigurator/>
             <DriverInfo/>
-        </div>
+        </motion.div>
     );
 };
 

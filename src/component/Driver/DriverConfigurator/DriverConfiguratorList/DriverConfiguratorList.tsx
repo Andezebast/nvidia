@@ -4,15 +4,32 @@ import './DriverConfiguratorList.scss';
 /*----------------------------------------*/
 import {useAppSelector} from "../../../../hooks/redux";
 import Loading from "../../../../svg/Loading";
-
 /*----------------------------------------*/
 interface IButtonSearchBoll {
     buttonSearchBoll: boolean
 }
-
 /*----------------------------------------*/
 const DriverConfiguratorList: FC<IButtonSearchBoll> = ({buttonSearchBoll}) => {
     const {drivers, isLoading, error} = useAppSelector(state => state.driverReducer)
+    /*----------------------------------------*/
+    const driverListing = {
+        hidden: {opacity: 1, scale: 0},
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    };
+    const driverItem = {
+        hidden: {y: 20, opacity: 0},
+        visible: {
+            y: 0,
+            opacity: 1
+        }
+    };
     /*----------------------------------------*/
     if (isLoading) {
         return (
@@ -42,10 +59,10 @@ const DriverConfiguratorList: FC<IButtonSearchBoll> = ({buttonSearchBoll}) => {
     /*----------------------------------------*/
     return (
         <div className="driver-page-configurator-list">
-            <div className="driver-configurator-items">
+            <motion.ul className="driver-configurator-items" variants={driverListing} initial="hidden" animate="visible">
                 {drivers.length
                     ? (drivers.map((driver, index) => (
-                        <div className="driver-configurator-item" key={index}>
+                        <motion.li className="driver-configurator-item" key={index} variants={driverItem}>
                             <div className="driver-configurator-item-image">
                                 <img src={driver.photo} alt="driver-photo"/>
                             </div>
@@ -63,12 +80,12 @@ const DriverConfiguratorList: FC<IButtonSearchBoll> = ({buttonSearchBoll}) => {
                             <div className="driver-configurator-item-save">
                                 <button>Save</button>
                             </div>
-                        </div>
+                        </motion.li>
                     )))
                     : (buttonSearchBoll &&
                     <div className='driver-configurator-empty'>No driver found for this request!</div>)
                 }
-            </div>
+            </motion.ul>
         </div>
     );
 };

@@ -2,10 +2,14 @@ import React, {FC} from 'react';
 import './DriverInfo.scss';
 import Cloud from '../../../svg/Cloud';
 import Question from '../../../svg/Question';
+import {motion} from "framer-motion";
 /*-------------------------------*/
 const DriverInfo: FC = () => {
     return (
-        <div className='driver-page-info'>
+        <motion.div className='driver-page-info'
+                    initial={{opacity: 0, scale: 0.5, y: 500}}
+                    animate={{opacity: 1, scale: 1, y: 0}}
+                    transition={{duration: 1, delay: 1}}>
             <div className="driver-page-info-item forum">
                 <div className="driver-info-item-image">
                     <Cloud/>
@@ -37,7 +41,7 @@ const DriverInfo: FC = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

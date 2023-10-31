@@ -1,10 +1,11 @@
-import React from 'react';
-
-const HomePage = () => {
+import React, {FC} from 'react';
+import HomeSlider from "../../component/Home/HomeSlider/HomeSlider";
+/*-----------------------------*/
+const HomePage: FC = () => {
 
     return (
-        <div>
-            Home!
+        <div className='home-page'>
+            <HomeSlider />
         </div>
     );
 };

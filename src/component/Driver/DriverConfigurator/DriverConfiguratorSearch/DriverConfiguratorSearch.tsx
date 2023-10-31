@@ -3,6 +3,7 @@ import './DriverConfiguratorSearch.scss';
 import {SubmitHandler, useForm} from "react-hook-form";
 import {useAppDispatch} from "../../../../hooks/redux";
 import {fetchDriver} from "../../../../store/reducers/Driver/DriverAction";
+import {motion} from "framer-motion";
 /*-----------------------------------------*/
 interface IButtonSearchBoll{
     setButtonSearchBull: Function,
@@ -61,7 +62,10 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
     }
     /*-------------------------------*/
     return (
-        <div className="driver-page-configurator-search">
+        <motion.div className="driver-page-configurator-search"
+                    initial={{opacity: 0, scale: 0.5, y: 500}}
+                    animate={{opacity: 1, scale: 1, y: 0}}
+                    transition={{duration: 1, delay: 0.5}}>
             <div className="driver-configurator-search-title">
                 <p>Driver Search</p>
             </div>
@@ -148,7 +152,7 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                     <button type="submit" onClick={handleEventButtonForm}>To Start Searching</button>
                 </div>
             </form>
-        </div>
+        </motion.div>
     );
 };
 
