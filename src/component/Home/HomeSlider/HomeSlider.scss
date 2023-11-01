@@ -1,38 +1,64 @@
-.home-page-slider{
-  .slick-slider{
-    button{
+.home-page-slider {
+  .slick-slider {
+    & > button {
       display: none !important;
     }
+    .slick-dots {
+      @apply bottom-2.5;
+      li{
+        button{
+          &:before{
+            @apply text-white text-base;
+          }
+          &:hover{
+            &:before{
+              color: #76b900;
+            }
+          }
+        }
+      }
+      li.slick-active{
+        button:before {
+          color: #76b900;
+          @apply opacity-100;
+        }
+      }
+    }
   }
-  .slider-item{
+
+  .slider-item {
     @apply relative;
-    &-background{
+    &-background {
       @apply absolute top-0 left-0 z-10 h-full;
-      img{
+      img {
         @apply w-full h-full object-cover;
       }
     }
-    &-content{
+
+    &-content {
       height: 500px;
       @apply relative z-20 py-0 flex flex-col justify-center;
-      &-title{
+      &-title {
         max-width: 600px;
         @apply py-2;
-        p{
+        p {
           @apply text-5xl font-bold;
         }
       }
-      &-subtitle{
+
+      &-subtitle {
         max-width: 600px;
         @apply py-2;
-        p{
+        p {
           @apply text-2xl font-bold;
         }
       }
-      &-button{
+
+      &-button {
         @apply pt-3;
         max-width: 150px;
-        a{
+
+        a {
           background-color: #76b900;
           @apply p-4 text-lg text-black font-semibold duration-500 flex items-center justify-center;
           &:hover {
