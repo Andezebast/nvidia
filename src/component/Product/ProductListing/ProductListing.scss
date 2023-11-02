@@ -4,10 +4,14 @@
     @apply grid grid-cols-4 gap-14;
   }
   /*-----------------------------*/
-  &-loading {
-    @apply flex items-center flex-col col-start-2 col-end-4;
+  &-loading,
+  &-error{
+    @apply flex items-center flex-col justify-center col-start-2 col-end-4 py-20 h-full;
     svg {
       max-width: 100px;
+    }
+    p{
+      @apply text-2xl font-bold;
     }
   }
   /*-----------------------------*/

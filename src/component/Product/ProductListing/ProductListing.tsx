@@ -61,7 +61,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                         duration: 2,
                         ease: "linear",
                         repeat: Infinity,
-                    }}>
+                    }} style={{maxWidth: '150px'}}>
                     <Loading />
                 </motion.div>
             </div>
@@ -69,7 +69,7 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
     }
     if (error) {
         return (
-            <div className='product-listing-error'>{error}</div>
+            <div className='product-listing-error'><p>{error}</p></div>
         )
     }
     if(emptyPropsProducts){
