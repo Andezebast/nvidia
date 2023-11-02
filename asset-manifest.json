@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nvidia/static/css/main.0e9c34d0.css",
-    "main.js": "/nvidia/static/js/main.ec188868.js",
+    "main.css": "/nvidia/static/css/main.74f1cc47.css",
+    "main.js": "/nvidia/static/js/main.2af4f06d.js",
     "static/media/Nvidia RTX 4090.jpg": "/nvidia/static/media/Nvidia RTX 4090.5e856fff555fbaf9c807.jpg",
     "static/media/nvidia-architecture.jpg": "/nvidia/static/media/nvidia-architecture.cd0ebcf7c394f3e09ce0.jpg",
     "static/media/nvidia-dlss-background.jpg": "/nvidia/static/media/nvidia-dlss-background.39da290f6afe89f4481d.jpg",
@@ -15,17 +15,23 @@
     "static/media/nvidia-reflex-background.jpg": "/nvidia/static/media/nvidia-reflex-background.8cfb0f51a803cacb9ddc.jpg",
     "static/media/nvidia-slider-2.jpg": "/nvidia/static/media/nvidia-slider-2.c0ad148a6ebb47502e33.jpg",
     "static/media/nvidia-slider-4.jpg": "/nvidia/static/media/nvidia-slider-4.cd3d44c515cbd30d4a88.jpg",
+    "static/media/home-driver-spotlight.png": "/nvidia/static/media/home-driver-spotlight.78f25dd04dfbaaa69824.png",
+    "static/media/home-product-pc.jpg": "/nvidia/static/media/home-product-pc.87edb643a34e5f64951b.jpg",
+    "static/media/home-driver-download.png": "/nvidia/static/media/home-driver-download.269ded5291d68f653e8f.png",
+    "static/media/home-driver-accept.png": "/nvidia/static/media/home-driver-accept.300ad0decdafd8b6b0df.png",
+    "static/media/home-product-video-card.jpg": "/nvidia/static/media/home-product-video-card.856e4cc82984073c2606.jpg",
+    "static/media/home-product-laptop.jpg": "/nvidia/static/media/home-product-laptop.5c79f08cb66f3a182999.jpg",
     "static/media/nvidia-performance.png": "/nvidia/static/media/nvidia-performance.325288130428140f7e20.png",
     "static/media/slick.svg": "/nvidia/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/nvidia/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/nvidia/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/nvidia/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nvidia/index.html",
-    "main.0e9c34d0.css.map": "/nvidia/static/css/main.0e9c34d0.css.map",
-    "main.ec188868.js.map": "/nvidia/static/js/main.ec188868.js.map"
+    "main.74f1cc47.css.map": "/nvidia/static/css/main.74f1cc47.css.map",
+    "main.2af4f06d.js.map": "/nvidia/static/js/main.2af4f06d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e9c34d0.css",
-    "static/js/main.ec188868.js"
+    "static/css/main.74f1cc47.css",
+    "static/js/main.2af4f06d.js"
   ]
 }
