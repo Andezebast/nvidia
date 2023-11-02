@@ -1,12 +1,14 @@
 import React, {useEffect} from 'react';
+import './ProductSinglePage.scss';
+import Loading from "../../svg/Loading";
+import {motion} from "framer-motion";
+/*--------------------------------------------*/
 import {useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {fetchProduct} from "../../store/reducers/Product/ProductAction";
-import './ProductSinglePage.scss';
-import {motion} from "framer-motion";
-import Loading from "../../svg/Loading";
 import {IProduct} from "../../models/IProduct";
 import {ShoppingCartSlice} from "../../store/reducers/Shopping-cart/ShoppingCartSlice";
+/*--------------------------------------------*/
 const ProductSinglePage = () => {
     const pageId = useParams();
     const id = pageId.id;
@@ -46,7 +48,10 @@ const ProductSinglePage = () => {
     }
     /*--------------------------------------------*/
     return (
-        <div className='product-single-page'>
+        <motion.div className='product-single-page'
+                    initial={{opacity: 0, scale: 0.5}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.8}}>
             {product.map((item, index) => (
                 <div key={index} className='product-single-item'>
                     <div className='product-single-item-image'>
@@ -71,7 +76,7 @@ const ProductSinglePage = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </motion.div>
     );
 };
 
