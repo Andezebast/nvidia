@@ -4,7 +4,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
 import {IProduct} from "../../../models/IProduct";
-
+import {motion} from "framer-motion";
 /*--------------------------------------------*/
 interface IProps {
     propsProducts: IProduct[] | any[],
@@ -49,7 +49,10 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
         }
     }, [inputSearchValue, boolMass, categoryMass])
     return (
-        <div className='product-filter'>
+        <motion.div className='product-filter'
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 3}}>
             <div className="product-filter-content">
                 <div className="filter-content-search">
                     <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch}
@@ -80,7 +83,7 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -7,9 +7,12 @@ import NvidiaBackground from './img/Nvidia RTX 4090.jpg';
 const AboutBanner: FC = () => {
     return (
         <div className='about-banner'>
-            <div className="about-banner-background">
+            <motion.div className="about-banner-background"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 3}}>
                 <img src={NvidiaBackground} alt="nvidia-background"/>
-            </div>
+            </motion.div>
             <motion.div className="about-banner-container"
                         key='about-banner'
                         initial={{

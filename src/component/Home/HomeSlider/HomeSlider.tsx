@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import './HomeSlider.scss';
 import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 /*-----------------------------*/
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -20,90 +21,96 @@ const HomeSlider: FC = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+
     return (
         <div className='home-page-slider'>
-            <Slider {...settings}>
-                <div className='slider-item'>
-                    <div className="slider-item-background">
-                        <img src={nvidiaSliderFirst} alt="first-slider-image"/>
-                    </div>
-                    <div className="slider-item-content container">
-                        <div className="slider-item-content-title">
-                            <p>More with AI, faster with RTX</p>
+            <motion.div className='home-page-slider-animation'
+                        initial={{opacity: 0, scale: 0.5}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.8}}>
+                <Slider {...settings}>
+                    <div className='slider-item'>
+                        <div className="slider-item-background">
+                            <img src={nvidiaSliderFirst} alt="first-slider-image"/>
                         </div>
-                        <div className="slider-item-content-subtitle">
-                            <p>Experience next-level AI with GeForce RTX™ and NVIDIA RTX™ graphics cards.</p>
-                        </div>
-                        <div className="slider-item-content-button">
-                            <Link to='/about'>More details</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className='slider-item'>
-                    <div className="slider-item-background">
-                        <img src={nvidiaSliderSecond} alt="first-slider-image"/>
-                    </div>
-                    <div className="slider-item-content container">
-                        <div className="slider-item-content-title">
-                            <p>FPS matters</p>
-                        </div>
-                        <div className="slider-item-content-subtitle">
-                            <p>GeForce RTX 40 and NVIDIA Reflex.</p>
-                        </div>
-                        <div className="slider-item-content-button">
-                            <Link to='/about'>More details</Link>
+                        <div className="slider-item-content container">
+                            <div className="slider-item-content-title">
+                                <p>More with AI, faster with RTX</p>
+                            </div>
+                            <div className="slider-item-content-subtitle">
+                                <p>Experience next-level AI with GeForce RTX™ and NVIDIA RTX™ graphics cards.</p>
+                            </div>
+                            <div className="slider-item-content-button">
+                                <Link to='/about'>More details</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='slider-item'>
-                    <div className="slider-item-background">
-                        <img src={nvidiaSliderThird} alt="first-slider-image"/>
-                    </div>
-                    <div className="slider-item-content container">
-                        <div className="slider-item-content-title">
-                            <p>PC Beta Sürümünde RTX Açık</p>
+                    <div className='slider-item'>
+                        <div className="slider-item-background">
+                            <img src={nvidiaSliderSecond} alt="first-slider-image"/>
                         </div>
-                        <div className="slider-item-content-subtitle">
-                            <p>NVIDIA DLSS ve Reflex ile</p>
-                        </div>
-                        <div className="slider-item-content-button">
-                            <Link to='/about'>More details</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className='slider-item'>
-                    <div className="slider-item-background">
-                        <img src={nvidiaSliderFourth} alt="first-slider-image"/>
-                    </div>
-                    <div className="slider-item-content container">
-                        <div className="slider-item-content-title">
-                            <p>NVIDIA DLSS</p>
-                        </div>
-                        <div className="slider-item-content-subtitle">
-                            <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
-                        </div>
-                        <div className="slider-item-content-button">
-                            <Link to='/about'>More details</Link>
+                        <div className="slider-item-content container">
+                            <div className="slider-item-content-title">
+                                <p>FPS matters</p>
+                            </div>
+                            <div className="slider-item-content-subtitle">
+                                <p>GeForce RTX 40 and NVIDIA Reflex.</p>
+                            </div>
+                            <div className="slider-item-content-button">
+                                <Link to='/about'>More details</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='slider-item '>
-                    <div className="slider-item-background">
-                        <img src={nvidiaSliderFifth} alt="first-slider-image"/>
+                    <div className='slider-item'>
+                        <div className="slider-item-background">
+                            <img src={nvidiaSliderThird} alt="first-slider-image"/>
+                        </div>
+                        <div className="slider-item-content container">
+                            <div className="slider-item-content-title">
+                                <p>PC Beta Sürümünde RTX Açık</p>
+                            </div>
+                            <div className="slider-item-content-subtitle">
+                                <p>NVIDIA DLSS ve Reflex ile</p>
+                            </div>
+                            <div className="slider-item-content-button">
+                                <Link to='/about'>More details</Link>
+                            </div>
+                        </div>
                     </div>
-                    <div className="slider-item-content container">
-                        <div className="slider-item-content-title">
-                            <p>#RTXON.</p>
+                    <div className='slider-item'>
+                        <div className="slider-item-background">
+                            <img src={nvidiaSliderFourth} alt="first-slider-image"/>
                         </div>
-                        <div className="slider-item-content-subtitle">
-                            <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
-                        </div>
-                        <div className="slider-item-content-button">
-                            <Link to='/about'>More details</Link>
+                        <div className="slider-item-content container">
+                            <div className="slider-item-content-title">
+                                <p>NVIDIA DLSS</p>
+                            </div>
+                            <div className="slider-item-content-subtitle">
+                                <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
+                            </div>
+                            <div className="slider-item-content-button">
+                                <Link to='/about'>More details</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Slider>
+                    <div className='slider-item '>
+                        <div className="slider-item-background">
+                            <img src={nvidiaSliderFifth} alt="first-slider-image"/>
+                        </div>
+                        <div className="slider-item-content container">
+                            <div className="slider-item-content-title">
+                                <p>#RTXON.</p>
+                            </div>
+                            <div className="slider-item-content-subtitle">
+                                <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
+                            </div>
+                            <div className="slider-item-content-button">
+                                <Link to='/about'>More details</Link>
+                            </div>
+                        </div>
+                    </div>
+                </Slider>
+            </motion.div>
         </div>
     );
 };

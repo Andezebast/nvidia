@@ -1,0 +1,50 @@
+.home-page-info{
+  &.product{
+    border-bottom: 2px solid #666;
+  }
+  &-title{
+    @apply pb-5;
+    p{
+      @apply text-center text-4xl font-bold;
+    }
+  }
+  &-subtitle{
+    p{
+      @apply text-center text-2xl font-bold;
+    }
+  }
+  &-items{
+    @apply pt-10 grid grid-cols-3 gap-5;
+  }
+  &-item{
+    @apply flex flex-col items-center text-center;
+    &-image{
+      @apply pb-2.5;
+      img{
+        @apply w-full h-full object-cover;
+      }
+    }
+    &-title{
+      @apply py-2.5 grow;
+      p{
+        @apply text-3xl font-bold;
+      }
+    }
+    &-subtitle{
+      @apply py-2.5 grow;
+      p{
+        @apply text-base font-normal;
+      }
+    }
+    &-button{
+      @apply pt-2.5;
+      a {
+        background-color: #76b900;
+        @apply p-4 text-lg text-black font-semibold duration-500 flex items-center justify-center;
+        &:hover {
+          background-color: #91c733;
+        }
+      }
+    }
+  }
+}
