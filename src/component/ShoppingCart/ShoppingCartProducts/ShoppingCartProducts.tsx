@@ -1,9 +1,10 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import './ShoppingCartProducts.scss';
 import {useAppSelector, useAppDispatch} from '../../../hooks/redux';
 import {motion} from "framer-motion";
 import {IProduct} from "../../../models/IProduct";
 import {ShoppingCartSlice} from '../../../store/reducers/Shopping-cart/ShoppingCartSlice';
+import {CheckoutSlice} from '../../../store/reducers/Checkout/CheckoutSlice';
 /*-------------------------------------*/
 const shoppingCartProductItems = {
     hidden: {opacity: 1, scale: 0},
@@ -44,6 +45,10 @@ const ShoppingCartProducts: FC = () => {
             action: 'plus'
         }))
     }
+    /*-------------------------------------*/
+    useEffect(()=>{
+        dispatch(CheckoutSlice.actions.AddCheckoutProducts(shoppingCartProducts))
+    },[shoppingCartProducts])
     /*-------------------------------------*/
     return (
         <motion.ul className='shopping-cart-products' variants={shoppingCartProductItems} initial="hidden" animate="visible">

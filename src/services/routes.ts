@@ -6,6 +6,14 @@ import DriverPage from "../page/Driver/DriverPage";
 import AboutPage from "../page/About/AboutPage";
 import ShoppingCartPage from '../page/ShoppingCart/ShoppingCartPage';
 import CheckoutLoginPage from '../page/Checkout/CheckoutLogin/CheckoutLoginPage';
+import CheckoutAcceptPage from '../page/Checkout/CheckoutAccept/CheckoutAcceptPage';
+
+const checkoutAcceptRoutes = {
+    key: '/checkoutAccept',
+    path: '/checkoutAccept',
+    component: CheckoutAcceptPage,
+    exact: true,
+}
 
 const checkoutLoginRoutes = {
     key: '/checkoutLogin',
@@ -65,5 +73,6 @@ export const routes = [
     homeRoutes,
     driverRoutes,
     shoppingRoutes,
-    checkoutLoginRoutes
+    checkoutLoginRoutes,
+    checkoutAcceptRoutes
 ]

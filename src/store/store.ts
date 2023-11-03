@@ -1,15 +1,18 @@
 import {combineReducers} from "redux";
 import {configureStore} from "@reduxjs/toolkit";
+/*----------------------------------------------*/
 import productsReducer from '../store/reducers/Products/ProductsSlice';
 import productReducer from "../store/reducers/Product/ProductSlice";
 import shoppingCartProductReducer from '../store/reducers/Shopping-cart/ShoppingCartSlice';
 import driverReducer from '../store/reducers/Driver/DriverSlice';
-
+import checkoutReducer from '../store/reducers/Checkout/CheckoutSlice';
+/*----------------------------------------------*/
 const rootReducer = combineReducers({
     productsReducer,
     productReducer,
     shoppingCartProductReducer,
-    driverReducer
+    driverReducer,
+    checkoutReducer
 })
 
 export const setupStore = () =>{

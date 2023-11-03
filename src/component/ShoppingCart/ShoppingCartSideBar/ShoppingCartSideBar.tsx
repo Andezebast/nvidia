@@ -1,13 +1,16 @@
 import React, {FC, useState, useEffect} from 'react';
 import './ShoppingCartSideBar.scss';
-import {useAppSelector} from "../../../hooks/redux";
-import {NavLink} from "react-router-dom";
+import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
+import {useNavigate} from "react-router";
 import Button from "@mui/material/Button";
 import {motion} from "framer-motion";
+import {CheckoutSlice} from '../../../store/reducers/Checkout/CheckoutSlice';
 /*---------------------------------------*/
 const ShoppingCartSideBar: FC = () => {
-    const shoppingCartProducts = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
     const [sum, setSum] = useState<number>(0);
+    const shoppingCartProducts = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
     /*---------------------------------------*/
     useEffect(() => {
         if (shoppingCartProducts.length) {
@@ -20,6 +23,12 @@ const ShoppingCartSideBar: FC = () => {
             setSum(0)
         }
     }, [shoppingCartProducts])
+    /*---------------------------------------*/
+    const handleEventButton = () =>{
+        dispatch(CheckoutSlice.actions.AddCheckoutQuantity(shoppingCartProducts.length))
+        dispatch(CheckoutSlice.actions.AddCheckoutSummary(sum))
+        navigate('/checkoutLogin')
+    }
     /*---------------------------------------*/
     return (
         <motion.div className='shopping-cart-sidebar'
@@ -35,8 +44,8 @@ const ShoppingCartSideBar: FC = () => {
                 </div>
                 <div className="shopping-cart-sidebar-content-checkout">
                     {shoppingCartProducts.length
-                        ? (<Button component={NavLink} to='/checkoutLogin'>Go to checkout</Button>)
-                        : (<Button component={NavLink} to='/checkoutLogin' disabled>Go to checkout</Button>)
+                        ? (<Button onClick={handleEventButton}>Go to checkout</Button>)
+                        : (<Button disabled>Go to checkout</Button>)
                     }
                 </div>
             </div>
