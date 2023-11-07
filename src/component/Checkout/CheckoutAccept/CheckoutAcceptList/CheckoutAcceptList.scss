@@ -1,0 +1,35 @@
+.checkout-accept-list{
+  @apply grid gap-8;
+}
+.checkout-accept-product{
+  @apply flex justify-between items-start;
+  &-image{
+    width: calc(35% - 10px);
+    img{
+      @apply w-full h-full object-contain;
+    }
+  }
+  &-content{
+    width: calc(65% - 10px);
+    &-title{
+      p{
+        @apply text-2xl font-bold;
+      }
+    }
+    &-description{
+      @apply py-2.5;
+      p{
+        @apply text-base font-normal ;
+      }
+    }
+    &-price{
+      p{
+        @apply text-base font-normal;
+        span{
+          color: #76b900;
+          @apply font-bold;
+        }
+      }
+    }
+  }
+}

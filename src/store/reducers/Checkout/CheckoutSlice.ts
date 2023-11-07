@@ -6,14 +6,14 @@ interface CheckoutState {
     products: IProduct[],
     account: IAccount[],
     quantity: number,
-    summary: number,
+    sum: number,
 }
 
 const initialState: CheckoutState = {
     products: [],
     account: [],
     quantity: 1,
-    summary: 1,
+    sum: 1,
 }
 
 export const CheckoutSlice = createSlice({
@@ -21,6 +21,7 @@ export const CheckoutSlice = createSlice({
     initialState,
     reducers: {
         AddCheckoutAccount(state, action: PayloadAction<IAccount>){
+            state.account = [];
             state.account.push(action.payload)
         },
         AddCheckoutProducts(state, action: PayloadAction<IProduct[]>){
@@ -29,8 +30,8 @@ export const CheckoutSlice = createSlice({
         AddCheckoutQuantity(state, action: PayloadAction<number>){
             state.quantity = action.payload
         },
-        AddCheckoutSummary(state, action: PayloadAction<number>){
-            state.summary = action.payload
+        AddCheckoutSum(state, action: PayloadAction<number>){
+            state.sum = action.payload
         },
     }
 })

@@ -1,0 +1,50 @@
+.checkout-accept-sidebar{
+  &-sticky{
+    @apply sticky top-5;
+  }
+  .sidebar-account{
+    @apply mb-5  p-5 rounded-xl border border-solid;
+    border-color: #76b900;
+    box-shadow: #76b900 0 2px 8px 0;
+    &-first-name,
+    &-last-name,
+    &-phone-number,
+    &-email{
+      @apply py-2;
+      p{
+        span{
+          @apply text-xl font-bold;
+        }
+        @apply text-xl font-normal;
+      }
+    }
+
+  }
+  .sidebar-result{
+    @apply sticky top-5 p-5 rounded-xl border border-solid;
+    border-color: #76b900;
+    box-shadow: #76b900 0 2px 8px 0;
+    &-sum,
+    &-quantity{
+      @apply py-2;
+      p{
+        span{
+          color: #ffffff;
+          @apply text-xl font-bold;
+        }
+        @apply text-xl font-normal;
+        color: #76b900;
+      }
+    }
+    &-confirm{
+      @apply pt-5;
+      a{
+        @apply text-lg p-1.5 block w-full text-black text-center rounded-none duration-500 transition;
+        background-color: #76b900;
+        &:hover{
+          background-color: #91c733;
+        }
+      }
+    }
+  }
+}

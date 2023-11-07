@@ -7,6 +7,14 @@ import AboutPage from "../page/About/AboutPage";
 import ShoppingCartPage from '../page/ShoppingCart/ShoppingCartPage';
 import CheckoutLoginPage from '../page/Checkout/CheckoutLogin/CheckoutLoginPage';
 import CheckoutAcceptPage from '../page/Checkout/CheckoutAccept/CheckoutAcceptPage';
+import CheckoutOrderPage from '../page/Checkout/CheckoutOrder/CheckoutOrder';
+
+const checkoutOrderRoutes = {
+    key: '/checkoutOrder',
+    path: '/checkoutOrder',
+    component: CheckoutOrderPage,
+    exact: true,
+}
 
 const checkoutAcceptRoutes = {
     key: '/checkoutAccept',
@@ -74,5 +82,6 @@ export const routes = [
     driverRoutes,
     shoppingRoutes,
     checkoutLoginRoutes,
-    checkoutAcceptRoutes
+    checkoutAcceptRoutes,
+    checkoutOrderRoutes
 ]

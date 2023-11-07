@@ -26,7 +26,7 @@ const ShoppingCartSideBar: FC = () => {
     /*---------------------------------------*/
     const handleEventButton = () =>{
         dispatch(CheckoutSlice.actions.AddCheckoutQuantity(shoppingCartProducts.length))
-        dispatch(CheckoutSlice.actions.AddCheckoutSummary(sum))
+        dispatch(CheckoutSlice.actions.AddCheckoutSum(sum))
         navigate('/checkoutLogin')
     }
     /*---------------------------------------*/
@@ -40,7 +40,7 @@ const ShoppingCartSideBar: FC = () => {
                     <p>Quantity of products : <span>{shoppingCartProducts.length >= 1 ? shoppingCartProducts.length : '0'}</span></p>
                 </div>
                 <div className="shopping-cart-sidebar-content-sum">
-                    <p>Summary number : <span>{sum ? sum : '0'} USD</span></p>
+                    <p>Sum: <span>{sum ? sum : '0'} USD</span></p>
                 </div>
                 <div className="shopping-cart-sidebar-content-checkout">
                     {shoppingCartProducts.length
