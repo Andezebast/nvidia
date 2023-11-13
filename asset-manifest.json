@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nvidia/static/css/main.b0281227.css",
-    "main.js": "/nvidia/static/js/main.c68385bf.js",
+    "main.css": "/nvidia/static/css/main.0cf46acb.css",
+    "main.js": "/nvidia/static/js/main.8231d1f4.js",
     "static/media/Nvidia RTX 4090.jpg": "/nvidia/static/media/Nvidia RTX 4090.5e856fff555fbaf9c807.jpg",
     "static/media/nvidia-architecture.jpg": "/nvidia/static/media/nvidia-architecture.cd0ebcf7c394f3e09ce0.jpg",
     "static/media/nvidia-dlss-background.jpg": "/nvidia/static/media/nvidia-dlss-background.39da290f6afe89f4481d.jpg",
@@ -27,11 +27,11 @@
     "static/media/slick.ttf": "/nvidia/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/nvidia/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nvidia/index.html",
-    "main.b0281227.css.map": "/nvidia/static/css/main.b0281227.css.map",
-    "main.c68385bf.js.map": "/nvidia/static/js/main.c68385bf.js.map"
+    "main.0cf46acb.css.map": "/nvidia/static/css/main.0cf46acb.css.map",
+    "main.8231d1f4.js.map": "/nvidia/static/js/main.8231d1f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0281227.css",
-    "static/js/main.c68385bf.js"
+    "static/css/main.0cf46acb.css",
+    "static/js/main.8231d1f4.js"
   ]
 }
