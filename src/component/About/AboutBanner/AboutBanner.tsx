@@ -29,13 +29,13 @@ const AboutBanner: FC = () => {
                         }}
                         transition={{duration: 1}}>
                 <div className="about-banner-title">
-                    <p>GeForce RTX 4090</p>
+                    <p className='nvidia-5xl'>GeForce RTX 4090</p>
                 </div>
                 <div className="about-banner-subtitle">
-                    <p>MORE THAN SPEED</p>
+                    <p className='nvidia-3xl-bold'>MORE THAN SPEED</p>
                 </div>
                 <div className="about-banner-description">
-                    <p>
+                    <p className='nvidia-xl'>
                         NVIDIA® GeForce RTX™ 4090 is the best GeForce graphics card. It provides a huge leap in
                         performance, efficiency and graphics powered by artificial intelligence. Experience
                         ultra-high-performance games, incredibly detailed virtual worlds, unprecedented
@@ -45,7 +45,7 @@ const AboutBanner: FC = () => {
                     </p>
                 </div>
                 <div className="about-banner-button">
-                    <Link to='/products'>All offers</Link>
+                    <Link to='/products' className='nvidia-button'>All offers</Link>
                 </div>
             </motion.div>
         </div>

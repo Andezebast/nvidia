@@ -14,10 +14,10 @@ const HomeInfoProduct: FC = () => {
                     animate={{opacity: 1, scale: 1, y: 0}}
                     transition={{duration: 1}}>
             <div className="home-page-info-title">
-                <p>GeForce Products</p>
+                <p className='nvidia-4xl'>GeForce Products</p>
             </div>
             <div className="home-page-info-subtitle">
-                <p>Compare and shop the latest GeForce graphics cards, gaming systems and accessories.</p>
+                <p className='nvidia-2xl-semibold'>Compare and shop the latest GeForce graphics cards, gaming systems and accessories.</p>
             </div>
             <div className="home-page-info-items">
                 <div className="home-page-info-item">
@@ -25,13 +25,13 @@ const HomeInfoProduct: FC = () => {
                         <img src={VideoCard} alt="video-card"/>
                     </div>
                     <div className="home-page-info-item-title">
-                        <p>Video cards</p>
+                        <p className='nvidia-3xl'>Video cards</p>
                     </div>
                     <div className="home-page-info-item-subtitle">
-                        <p>NVIDIA GeForce RTX video cards are the weapon of choice for gamers.</p>
+                        <p className='nvidia-p'>NVIDIA GeForce RTX video cards are the weapon of choice for gamers.</p>
                     </div>
                     <div className="home-page-info-item-button">
-                        <Link to='/products'>More details</Link>
+                        <Link to='/products' className='nvidia-button'>More details</Link>
                     </div>
                 </div>
                 <div className="home-page-info-item">
@@ -39,13 +39,13 @@ const HomeInfoProduct: FC = () => {
                         <img src={Laptop} alt="laptop"/>
                     </div>
                     <div className="home-page-info-item-title">
-                        <p>Laptops</p>
+                        <p className='nvidia-3xl'>Laptops</p>
                     </div>
                     <div className="home-page-info-item-subtitle">
-                        <p>Ultra-thin. Incredibly powerful. Gaming laptops based on NVIDIA GeForce RTX.</p>
+                        <p className='nvidia-p'>Ultra-thin. Incredibly powerful. Gaming laptops based on NVIDIA GeForce RTX.</p>
                     </div>
                     <div className="home-page-info-item-button">
-                        <Link to='/products'>More details</Link>
+                        <Link to='/products' className='nvidia-button'>More details</Link>
                     </div>
                 </div>
                 <div className="home-page-info-item">
@@ -53,13 +53,13 @@ const HomeInfoProduct: FC = () => {
                         <img src={PC} alt="PC"/>
                     </div>
                     <div className="home-page-info-item-title">
-                        <p>Gaming PC</p>
+                        <p className='nvidia-3xl'>Gaming PC</p>
                     </div>
                     <div className="home-page-info-item-subtitle">
-                        <p>Powerful GeForce RTX-based computers for gaming and work.</p>
+                        <p className='nvidia-p'>Powerful GeForce RTX-based computers for gaming and work.</p>
                     </div>
                     <div className="home-page-info-item-button">
-                        <Link to='/products'>More details</Link>
+                        <Link to='/products' className='nvidia-button'>More details</Link>
                     </div>
                 </div>
             </div>

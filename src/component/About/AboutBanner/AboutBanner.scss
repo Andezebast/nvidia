@@ -18,30 +18,20 @@
     .about-banner-title{
       @apply pb-7;
       p{
-        @apply text-6xl text-white font-bold;
+        @apply text-white;
       }
     }
     .about-banner-subtitle{
       @apply pb-7;
       p{
-        @apply text-3xl text-white font-bold;
+        @apply text-white;
       }
     }
     .about-banner-description{
       @apply max-w-md pb-10 font-normal;
-      p{
-        @apply text-xl;
-      }
     }
     .about-banner-button{
       max-width: 150px;
-      a{
-        background-color: #76b900;
-        @apply p-4 text-lg text-black font-semibold duration-500 flex items-center justify-center;
-        &:hover {
-          background-color: #91c733;
-        }
-      }
     }
   }
 }

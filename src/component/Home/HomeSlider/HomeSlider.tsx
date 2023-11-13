@@ -35,13 +35,13 @@ const HomeSlider: FC = () => {
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
-                                <p>More with AI, faster with RTX</p>
+                                <p className='nvidia-5xl'>More with AI, faster with RTX</p>
                             </div>
                             <div className="slider-item-content-subtitle">
-                                <p>Experience next-level AI with GeForce RTX™ and NVIDIA RTX™ graphics cards.</p>
+                                <p className='nvidia-2xl-semibold'>Experience next-level AI with GeForce RTX™ and NVIDIA RTX™ graphics cards.</p>
                             </div>
                             <div className="slider-item-content-button">
-                                <Link to='/about'>More details</Link>
+                                <Link to='/about' className='nvidia-button'>More details</Link>
                             </div>
                         </div>
                     </div>
@@ -51,13 +51,13 @@ const HomeSlider: FC = () => {
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
-                                <p>FPS matters</p>
+                                <p className='nvidia-5xl'>FPS matters</p>
                             </div>
                             <div className="slider-item-content-subtitle">
-                                <p>GeForce RTX 40 and NVIDIA Reflex.</p>
+                                <p className='nvidia-2xl-semibold'>GeForce RTX 40 and NVIDIA Reflex.</p>
                             </div>
                             <div className="slider-item-content-button">
-                                <Link to='/about'>More details</Link>
+                                <Link to='/about' className='nvidia-button'>More details</Link>
                             </div>
                         </div>
                     </div>
@@ -67,13 +67,13 @@ const HomeSlider: FC = () => {
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
-                                <p>PC Beta Sürümünde RTX Açık</p>
+                                <p className='nvidia-5xl'>PC Beta Sürümünde RTX Açık</p>
                             </div>
                             <div className="slider-item-content-subtitle">
-                                <p>NVIDIA DLSS ve Reflex ile</p>
+                                <p className='nvidia-2xl-semibold'>NVIDIA DLSS ve Reflex ile</p>
                             </div>
                             <div className="slider-item-content-button">
-                                <Link to='/about'>More details</Link>
+                                <Link to='/about' className='nvidia-button'>More details</Link>
                             </div>
                         </div>
                     </div>
@@ -83,29 +83,29 @@ const HomeSlider: FC = () => {
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
-                                <p>NVIDIA DLSS</p>
+                                <p className='nvidia-5xl'>NVIDIA DLSS</p>
                             </div>
                             <div className="slider-item-content-subtitle">
-                                <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
+                                <p className='nvidia-2xl-semibold'>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
                             </div>
                             <div className="slider-item-content-button">
-                                <Link to='/about'>More details</Link>
+                                <Link to='/about' className='nvidia-button'>More details</Link>
                             </div>
                         </div>
                     </div>
-                    <div className='slider-item '>
+                    <div className='slider-item'>
                         <div className="slider-item-background">
                             <img src={nvidiaSliderFifth} alt="first-slider-image"/>
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
-                                <p>#RTXON.</p>
+                                <p className='nvidia-5xl'>#RTXON.</p>
                             </div>
                             <div className="slider-item-content-subtitle">
-                                <p>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
+                                <p className='nvidia-2xl-semibold'>With support for NVIDIA DLSS 3.5 and full ray tracing.</p>
                             </div>
                             <div className="slider-item-content-button">
-                                <Link to='/about'>More details</Link>
+                                <Link to='/about' className='nvidia-button'>More details</Link>
                             </div>
                         </div>
                     </div>

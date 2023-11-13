@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="footer-columns">
                     <div className="footer-column">
                         <div className="footer-column-title">
-                            <p>Products</p>
+                            <p className='nvidia-2xl-bold'>Products</p>
                         </div>
                         <ul className="footer-column-links">
                             <li className="footer-column-link">
@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-column">
                         <div className="footer-column-title">
-                            <p>Pages</p>
+                            <p className='nvidia-2xl-bold'>Pages</p>
                         </div>
                         <ul className="footer-column-links">
                             <li className="footer-column-link">
@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-column">
                         <div className="footer-column-title">
-                            <p>Social media</p>
+                            <p className='nvidia-2xl-bold'>Social media</p>
                         </div>
                         <ul className="footer-column-links">
                             <li className="footer-column-link social">
@@ -91,7 +91,7 @@ const Footer = () => {
                     <a href='/'>Связаться с нами</a>
                 </div>
                 <div className="footer-bottom-copyright">
-                    <p>Copyright © 2023 NVIDIA Corporation</p>
+                    <p className='nvidia-p'>Copyright © 2023 NVIDIA Corporation</p>
                 </div>
             </div>
         </div>

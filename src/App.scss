@@ -7,3 +7,58 @@
     }
   }
 }
+/*-----------------*/
+.nvidia-5xl{
+  @apply text-5xl font-bold;
+  /*-----------------------*/
+}
+/*-----------------*/
+.nvidia-4xl{
+  @apply text-4xl font-bold;
+  /*-----------------------*/
+}
+/*-----------------*/
+.nvidia-3xl-bold{
+  @apply text-3xl font-bold;
+  /*-----------------------*/
+}
+.nvidia-3xl{
+  @apply text-3xl font-semibold;
+  /*-----------------------*/
+}
+/*-----------------*/
+.nvidia-2xl-bold{
+  @apply text-2xl font-bold;
+}
+.nvidia-2xl-semibold{
+  @apply text-2xl font-semibold;
+}
+.nvidia-2xl-normal{
+  @apply text-2xl font-normal;
+}
+/*-----------------*/
+.nvidia-xl-bold{
+  @apply text-xl font-bold;
+}
+.nvidia-xl{
+  @apply text-xl font-normal;
+}
+/*-----------------*/
+.nvidia-p-bold{
+  @apply text-base font-bold;
+}
+.nvidia-p{
+  @apply text-base font-normal;
+}
+/*-----------------*/
+.nvidia-xs-p{
+  @apply text-xs font-normal;
+}
+/*-----------------*/
+.nvidia-button{
+  background-color: #76b900;
+  @apply p-4 text-lg text-black font-semibold duration-500 flex items-center justify-center;
+  &:hover {
+    background-color: #91c733;
+  }
+}

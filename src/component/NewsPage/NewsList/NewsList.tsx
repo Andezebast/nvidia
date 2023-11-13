@@ -6,7 +6,6 @@ interface IList {
     link: string,
     url: string
 }
-
 interface INewsList {
     image: string,
     subtitle: string,
@@ -14,7 +13,7 @@ interface INewsList {
     links: IList[],
     description: string
 }
-
+/*------------------------*/
 const NewsListMass: INewsList[] = [
     {
         image: 'https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/news/rtx-40-series-graphics-cards-announcements/geforce-rtx-40-series-announcement-news-roundup-newsfeed.jpg',
@@ -151,10 +150,10 @@ const NewsList: FC = () => {
                     </div>
                     <div className="news-page-item-content">
                         <div className="news-page-item-content-subtitle">
-                            <p>{list.subtitle}</p>
+                            <p className='nvidia-xs-p'>{list.subtitle}</p>
                         </div>
                         <div className="news-page-item-content-title">
-                            <p>{list.title}</p>
+                            <p className='nvidia-2xl-bold'>{list.title}</p>
                         </div>
                         <div className="news-page-item-content-links">
                             {list.links.map((link, index) => (
@@ -164,7 +163,7 @@ const NewsList: FC = () => {
                             ))}
                         </div>
                         <div className="news-page-item-content-description">
-                            <p>{list.description}</p>
+                            <p className='nvidia-p'>{list.description}</p>
                         </div>
                     </div>
                 </motion.li>
