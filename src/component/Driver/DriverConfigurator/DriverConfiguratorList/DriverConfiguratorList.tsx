@@ -68,22 +68,22 @@ const DriverConfiguratorList: FC<IButtonSearchBoll> = ({buttonSearchBoll}) => {
                             </div>
                             <div className="driver-configurator-item-content">
                                 <div className="driver-configurator-item-content-title">
-                                    <p>{driver.title}</p>
+                                    <p className='nvidia-2xl-bold'>{driver.title}</p>
                                 </div>
                                 <div className="driver-configurator-item-content-description">
-                                    <p>Driver version: {driver.version} - {driver.date}</p>
+                                    <p className='nvidia-p'>Driver version: {driver.version} - {driver.date}</p>
                                 </div>
                                 <div className="driver-configurator-item-content-OS">
-                                    <p>OS: {driver.OS}</p>
+                                    <p className='nvidia-p'>OS: {driver.OS}</p>
                                 </div>
                             </div>
                             <div className="driver-configurator-item-save">
-                                <button>Save</button>
+                                <button className='nvidia-button'>Save</button>
                             </div>
                         </motion.li>
                     )))
                     : (buttonSearchBoll &&
-                    <div className='driver-configurator-empty'>No driver found for this request!</div>)
+                    <div className='driver-configurator-empty nvidia-2xl-bold'>No driver found for this request!</div>)
                 }
             </motion.ul>
         </div>

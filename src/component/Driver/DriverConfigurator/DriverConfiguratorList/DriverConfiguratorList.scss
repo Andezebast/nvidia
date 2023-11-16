@@ -1,53 +1,33 @@
-.driver-configurator-loading{
+.driver-configurator-loading {
   @apply flex items-center justify-center h-full w-full;
-  div{
+  div {
     width: 100px;
-    svg{
+    svg {
       width: 100%;
       height: 100%;
     }
   }
 }
-.driver-configurator-items{
+.driver-configurator-items {
   @apply grid gap-8;
-  .driver-configurator-item{
+  .driver-configurator-item {
     @apply flex justify-between items-center;
-    &-image{
+    &-image {
       width: 90px;
-      img{
+
+      img {
         @apply w-full h-full object-contain;
       }
     }
-    &-content{
+    &-content {
       @apply grow pl-3 pr-2;
-      &-title{
-        p{
-          @apply text-2xl font-bold;
-        }
-      }
-      &-description{
+      &-description {
         @apply py-2.5;
-      }
-      &-OS{
-        p{
-
-        }
-      }
-    }
-    &-save{
-      button{
-        @apply p-5 text-black font-semibold transition duration-500;
-        background-color: #76b900;
-      }
-      &:hover{
-        button{
-          background-color: #91c733;
-        }
       }
     }
   }
-  .driver-configurator-empty{
-    @apply text-center text-2xl font-bold;
+  .driver-configurator-empty {
+    @apply text-center;
     color: #76b900;
   }
 }

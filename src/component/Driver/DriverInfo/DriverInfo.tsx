@@ -15,10 +15,10 @@ const DriverInfo: FC = () => {
                     <Cloud/>
                 </div>
                 <div className="driver-info-item-title">
-                    <p>Driver Forum</p>
+                    <p className='nvidia-2xl-bold'>Driver Forum</p>
                 </div>
                 <div className="driver-info-item-description">
-                    <p>Any questions about drivers? Discuss them with other GeForce users on our forum.</p>
+                    <p className='nvidia-p'>Any questions about drivers? Discuss them with other GeForce users on our forum.</p>
                 </div>
             </div>
             <div className="driver-page-info-item studio">
@@ -26,18 +26,18 @@ const DriverInfo: FC = () => {
                     <Question/>
                 </div>
                 <div className="driver-info-item-title">
-                    <p>Game Ready Drivers & Studio Drivers</p>
+                    <p className='nvidia-2xl-bold'>Game Ready Drivers & Studio Drivers</p>
                 </div>
                 <div className="driver-info-item-description">
-                    <p>
-                        Драйверы NVIDIA специально разработаны, чтобы обеспечить наилучшие возможности как для
-                        современных игр, так и для работы в графических приложениях. Геймерам, которым важна
-                        поддержка новых игр, патчей и дополнительного контента с первого дня, стоит отдать
-                        предпочтение драйверам Game Ready. Если вам в первую очередь важно обеспечить надежность в
-                        работе с графикой, в том числе для редактирования видео, анимации, фотографии, графического
-                        дизайна и прямых трансляций, оптимальным выбором станут драйверы Studio.Работаете и играете?
-                        Не переживайте, любой драйвер обеспечит работу графических приложений и отличные игровые
-                        возможности.
+                    <p className='nvidia-p'>
+                        NVIDIA drivers are specifically designed to provide the best possible experience for both
+                        modern games and for working in graphic applications. Gamers who care
+                        support for new games, patches and additional content from day one, worth paying for
+                        preference for Game Ready drivers. If your first priority is to ensure reliability in
+                        working with graphics, including video editing, animation, photography, graphic
+                        design and live broadcasts, Studio drivers are the best choice. Work and play?
+                        Don't worry, any driver will provide graphics applications and excellent gaming
+                        possibilities.
                     </p>
                 </div>
             </div>

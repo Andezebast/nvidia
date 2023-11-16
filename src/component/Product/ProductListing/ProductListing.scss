@@ -10,9 +10,6 @@
     svg {
       max-width: 100px;
     }
-    p{
-      @apply text-2xl font-bold;
-    }
   }
   /*-----------------------------*/
   .product-item {
@@ -29,31 +26,23 @@
     .product-content {
       @apply grow flex flex-col pt-4 text-center;
       .product-item-name {
-        @apply pb-3.5 text-2xl font-extrabold;
+        @apply pb-3.5;
       }
       .product-item-description {
-        @apply pb-3.5 text-xl;
+        @apply pb-3.5;
       }
       .product-item-price {
-        @apply grow pb-2.5 text-xl;
+        @apply grow pb-2.5 flex justify-center items-center;
         span {
           color: #76b900;
-          @apply pr-2 text-base line-through;
+          @apply pr-2 line-through;
         }
       }
       .product-item-buttons {
         @apply flex justify-between;
-        .button-detail,
+        .nvidia-button,
         .shopping-cart {
           width: calc(50% - 10px);
-        }
-
-        .button-detail {
-          background-color: #76b900;
-          @apply text-black font-semibold duration-500 flex items-center justify-center;
-          &:hover {
-            background-color: #91c733;
-          }
         }
 
         .shopping-cart {

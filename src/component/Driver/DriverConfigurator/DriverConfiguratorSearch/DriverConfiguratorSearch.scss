@@ -1,9 +1,6 @@
 .driver-configurator-search {
   &-title {
     @apply pb-5;
-    p {
-      @apply text-3xl font-bold;
-    }
   }
   &-subtitle {
     @apply pb-6;
@@ -14,30 +11,16 @@
       @apply flex items-center pb-6 w-full;
       p {
         width: 40%;
-        @apply pr-2 text-end text-base;
+        @apply pr-2 text-end;
       }
-
       select {
         @apply w-full cursor-pointer outline-none h-9;
         border: 2px solid #666666;
         color: #666666;
         background-color: #1A1A1A;
-
         &:hover,
-        &:focus {
+        &:focus{
           border-color: #76b900;
-        }
-      }
-    }
-    .search-form-button {
-      button {
-        @apply p-2.5 text-black font-semibold transition duration-500;
-        background-color: #76b900;
-      }
-
-      &:hover {
-        button {
-          background-color: #91c733;
         }
       }
     }

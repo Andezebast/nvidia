@@ -58,15 +58,15 @@ const ProductSinglePage = () => {
                         <img src={item.photo} alt="image"/>
                     </div>
                     <div className='product-single-item-name'>
-                        <p>{item.name}</p>
+                        <p className='nvidia-4xl'>{item.name}</p>
                     </div>
                     <div className='product-single-item-description'>
-                        <p>{item.description}</p>
+                        <p className='nvidia-2xl-normal'>{item.description}</p>
                     </div>
                     <div className='product-single-item-price'>
                         {item.salePrice !== ''
-                            ? <p><span>{item.price}</span>{item.salePrice}</p>
-                            : <p>{item.price}</p>}
+                            ? <p className='nvidia-2xl-bold'><span className='nvidia-p'>{item.price}</span>{item.salePrice}</p>
+                            : <p className='nvidia-2xl-bold'>{item.price}</p>}
                     </div>
                     <div className="product-single-item-shopping-cart">
                         {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === item.id) > -1

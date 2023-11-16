@@ -69,12 +69,12 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
     }
     if (error) {
         return (
-            <div className='product-listing-error'><p>{error}</p></div>
+            <div className='product-listing-error'><p className='nvidia-2xl-bold' style={{textAlign: 'center'}}>{error}</p></div>
         )
     }
     if(emptyPropsProducts){
         return(
-            <div className='product-listing-empty'>There are no products matching this filter!</div>
+            <div className='product-listing-empty nvidia-2xl-bold' style={{textAlign: 'center'}}>There are no products matching this filter!</div>
         )
     }
     /*--------------------------------------------*/
@@ -99,20 +99,20 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                 </div>
                                 <div className='product-content'>
                                     <div className='product-item-name'>
-                                        <p>{product.name}</p>
+                                        <p className='nvidia-2xl-bold'>{product.name}</p>
                                     </div>
                                     <div className='product-item-description'>
-                                        <p>{product.description}</p>
+                                        <p className='nvidia-xl'>{product.description}</p>
                                     </div>
                                     <div className='product-item-price'>
                                         {product.salePrice !== ''
-                                            ? <p><span>{product.price}</span>{product.salePrice}</p>
-                                            : <p>{product.price}</p>}
+                                            ? <p className='nvidia-xl-bold'><span className='nvidia-p'>{product.price}</span>{product.salePrice}</p>
+                                            : <p className='nvidia-xl-bold'>{product.price}</p>}
                                     </div>
                                     {product.isInStock
                                         ? (
                                             <div className="product-item-buttons">
-                                                <NavLink className="button-detail" to={`/product/${product.id}`}>Detail</NavLink>
+                                                <NavLink className="nvidia-button" to={`/product/${product.id}`}>Detail</NavLink>
                                                 {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === product.id) > -1
                                                 ? (<button className="shopping-cart disabled" disabled>Already in the cart</button>)
                                                 : (<button className="shopping-cart" onClick={() => handleEventShoppingCart(product)}>Add to Shopping Cart</button>)
@@ -144,20 +144,20 @@ const ProductListing: FC<IProps> = ({setPropsProducts, filterPropsProducts, empt
                                 </div>
                                 <div className='product-content'>
                                     <div className='product-item-name'>
-                                        <p>{product.name}</p>
+                                        <p className='nvidia-2xl-bold'>{product.name}</p>
                                     </div>
                                     <div className='product-item-description'>
-                                        <p>{product.description}</p>
+                                        <p className='nvidia-xl'>{product.description}</p>
                                     </div>
                                     <div className='product-item-price'>
                                         {product.salePrice !== ''
-                                            ? <p><span>{product.price}</span>{product.salePrice}</p>
-                                            : <p>{product.price}</p>}
+                                            ? <p className='nvidia-xl-bold'><span className='nvidia-p'>{product.price}</span>{product.salePrice}</p>
+                                            : <p className='nvidia-xl-bold'>{product.price}</p>}
                                     </div>
                                     {product.isInStock
                                         ? (
                                             <div className="product-item-buttons">
-                                                <NavLink className="button-detail" to={`/product/${product.id}`}>Detail</NavLink>
+                                                <NavLink className="nvidia-button" to={`/product/${product.id}`}>Detail</NavLink>
                                                 {shoppingCartProducts.length && shoppingCartProducts.findIndex(shoppingProduct => shoppingProduct.id === product.id) > -1
                                                     ? (<button className="shopping-cart disabled" disabled>Already in Shopping Cart</button>)
                                                     : (<button className="shopping-cart" onClick={() => handleEventShoppingCart(product)}>Add to Shopping Cart</button>)

@@ -12,7 +12,7 @@ const DriverPage: FC = () => {
                     animate={{opacity: 1, scale: 1, y: 0}}
                     transition={{duration: 1, delay: 0.5}}>
             <div className="driver-page-title">
-                <p>Drivers GeForce®</p>
+                <p className='nvidia-4xl'>Drivers GeForce®</p>
             </div>
             <DriverConfigurator/>
             <DriverInfo/>

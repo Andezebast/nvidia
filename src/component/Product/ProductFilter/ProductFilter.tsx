@@ -55,8 +55,7 @@ const ProductFilter: FC<IProps> = ({propsProducts, setFilterPropsProducts, setEm
                     transition={{duration: 3}}>
             <div className="product-filter-content">
                 <div className="filter-content-search">
-                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch}
-                               value={inputSearchValue}/>
+                    <TextField label="Search..." variant="filled" color='success' onChange={handleEventSearch} value={inputSearchValue}/>
                 </div>
                 <div className="filter-content-items">
                     <div className="filter-content-item">

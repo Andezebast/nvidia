@@ -67,21 +67,21 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                     animate={{opacity: 1, scale: 1, y: 0}}
                     transition={{duration: 1, delay: 0.5}}>
             <div className="driver-configurator-search-title">
-                <p>Driver Search</p>
+                <p className='nvidia-3xl-bold'>Driver Search</p>
             </div>
             <div className="driver-configurator-search-subtitle">
-                <p>Find all GeForce drivers by providing information about your system.</p>
+                <p className='nvidia-p'>Find all GeForce drivers by providing information about your system.</p>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="driver-configurator-search-form">
                 <div className="search-form-selector">
-                    <p>Product: </p>
+                    <p className='nvidia-p'>Product: </p>
                     <select {...register('product')} id="product" onChange={handleChangeEvent} >
                         <option value="GeForce">GeForce</option>
                         <option value="TITAN">TITAN</option>
                     </select>
                 </div>
                 <div className="search-form-selector">
-                    <p>Series: </p>
+                    <p className='nvidia-p'>Series: </p>
                     {geForce
                         ? (
                             <select {...register('series')} id="series" onChange={handleChangeRTXEvent}>
@@ -98,7 +98,7 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                     }
                 </div>
                 <div className="search-form-selector">
-                    <p>Model: </p>
+                    <p className='nvidia-p'>Model: </p>
                     {geForce
                         ? (
                             <>
@@ -139,7 +139,7 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                     }
                 </div>
                 <div className="search-form-selector">
-                    <p>Operating System: </p>
+                    <p className='nvidia-p'>Operating System: </p>
                     <select {...register('OS')} id="OS">
                         <option value="Windows 11">Windows 11</option>
                         <option value="Windows 10">Windows 10</option>
@@ -149,7 +149,7 @@ const DriverConfiguratorSearch: FC<IButtonSearchBoll> = ({setButtonSearchBull}) 
                     </select>
                 </div>
                 <div className="search-form-button">
-                    <button type="submit" onClick={handleEventButtonForm}>To Start Searching</button>
+                    <button type="submit" onClick={handleEventButtonForm} className='nvidia-button'>To Start Searching</button>
                 </div>
             </form>
         </motion.div>
