@@ -31,7 +31,6 @@ const ShoppingCartProducts: FC = () => {
     /*-------------------------------------*/
     const handleDeleteEvent = (product: IProduct) => {
         dispatch(ShoppingCartSlice.actions.RemoveFromShoppingCart(product))
-        console.log(shoppingCartProducts)
     }
     const handleMinusEvent = (id: string) => {
         dispatch(ShoppingCartSlice.actions.quantityShoppingCart({
@@ -59,13 +58,16 @@ const ShoppingCartProducts: FC = () => {
                             <img src={product.photo} alt="photo"/>
                         </div>
                         <div className="shopping-cart-product-content">
-                            <div className='shopping-cart-product-content-name'><p>{product.name}</p></div>
+                            <div className='shopping-cart-product-content-name'>
+                                <p className='nvidia-2xl-bold'>{product.name}</p>
+                            </div>
                             <div className='shopping-cart-product-content-description'>
-                                <p>{product.description}</p></div>
+                                <p className='nvidia-p'>{product.description}</p>
+                            </div>
                             <div className='shopping-cart-product-content-price'>
                                 {product.salePrice !== ''
-                                    ? <p><span>{product.price}</span>{product.salePrice}</p>
-                                    : <p>{product.price}</p>}
+                                    ? <p className='nvidia-p'><span className='nvidia-p'>{product.price}</span>{product.salePrice}</p>
+                                    : <p className='nvidia-p'>{product.price}</p>}
                             </div>
                             <div className="shopping-cart-product-content-quantity">
                                 <div className="shopping-cart-quantity-minus" onClick={() => handleMinusEvent(product.id)}>-</div>
@@ -82,7 +84,7 @@ const ShoppingCartProducts: FC = () => {
                     </motion.li>
                 )))
                 : (<motion.ul className='shopping-cart-empty' variants={shoppingCartProductItems} initial="hidden" animate="visible">
-                    <motion.li variants={shoppingCartProductItem}>Shopping cart is Empty!</motion.li>
+                    <motion.li variants={shoppingCartProductItem} className='nvidia-2xl-normal'>Shopping cart is Empty!</motion.li>
                 </motion.ul>)
             }
         </motion.ul>

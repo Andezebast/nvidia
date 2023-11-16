@@ -6,7 +6,6 @@
   &-subtitle{
     @apply py-2;
     p{
-      @apply text-xl font-bold;
       span{
         color: #76b900;
       }
@@ -15,7 +14,7 @@
   &-button{
     @apply pt-5;
     button{
-      @apply w-full text-black rounded-none duration-500 transition;
+      @apply w-full text-black rounded-none duration-500 transition p-2.5;
       background-color: #76b900;
       &:hover{
         background-color: #91c733;

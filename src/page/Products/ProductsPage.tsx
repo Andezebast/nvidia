@@ -11,7 +11,7 @@ const ProductsPage: FC = () => {
     const [filterPropsProducts, setFilterPropsProducts] = useState<IPropsProducts>([]);
     const [emptyPropsProducts, setEmptyPropsProducts] = useState<boolean | any>();
     return (
-        <div className='product-page'>
+        <div className='product-page container'>
             <ProductFilter propsProducts={propsProducts} setFilterPropsProducts={setFilterPropsProducts} setEmptyPropsProducts={setEmptyPropsProducts}/>
             <ProductListing setPropsProducts={setPropsProducts} filterPropsProducts={filterPropsProducts} emptyPropsProducts={emptyPropsProducts}/>
         </div>

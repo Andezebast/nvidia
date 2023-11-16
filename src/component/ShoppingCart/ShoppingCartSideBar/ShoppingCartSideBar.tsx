@@ -37,10 +37,10 @@ const ShoppingCartSideBar: FC = () => {
                     transition={{duration: 1}}>
             <div className="shopping-cart-sidebar-content">
                 <div className="shopping-cart-sidebar-content-count">
-                    <p>Quantity of products : <span>{shoppingCartProducts.length >= 1 ? shoppingCartProducts.length : '0'}</span></p>
+                    <p className='nvidia-xl-bold'>Quantity of products : <span>{shoppingCartProducts.length >= 1 ? shoppingCartProducts.length : '0'}</span></p>
                 </div>
                 <div className="shopping-cart-sidebar-content-sum">
-                    <p>Sum: <span>{sum ? sum : '0'} USD</span></p>
+                    <p className='nvidia-xl-bold'>Sum: <span>{sum ? sum : '0'} USD</span></p>
                 </div>
                 <div className="shopping-cart-sidebar-content-checkout">
                     {shoppingCartProducts.length

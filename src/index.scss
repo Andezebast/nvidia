@@ -6,26 +6,26 @@ body{
   @apply h-screen;
   #root{
     @apply h-full;
+    .container{
+      @apply max-w-screen-xl m-auto px-5 py-24;
+    }
   }
 }
+
 /*-----------------*/
 .nvidia-5xl{
   @apply text-5xl font-bold;
-  /*-----------------------*/
 }
 /*-----------------*/
 .nvidia-4xl{
   @apply text-4xl font-bold;
-  /*-----------------------*/
 }
 /*-----------------*/
 .nvidia-3xl-bold{
   @apply text-3xl font-bold;
-  /*-----------------------*/
 }
 .nvidia-3xl{
   @apply text-3xl font-semibold;
-  /*-----------------------*/
 }
 /*-----------------*/
 .nvidia-2xl-bold{

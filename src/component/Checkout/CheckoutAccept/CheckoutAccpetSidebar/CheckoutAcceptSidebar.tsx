@@ -16,28 +16,28 @@ const CheckoutAcceptSidebar: FC = () => {
                 {account.map((item, index) => (
                     <div className='sidebar-account' key={index}>
                         <div className="sidebar-account-first-name">
-                            <p><span>First Name: </span>{item.firstName}</p>
+                            <p className='nvidia-xl'><span className='nvidia-xl-bold'>First Name: </span>{item.firstName}</p>
                         </div>
                         <div className="sidebar-account-last-name">
-                            <p><span>Last Name: </span>{item.lastName}</p>
+                            <p className='nvidia-xl'><span className='nvidia-xl-bold'>Last Name: </span>{item.lastName}</p>
                         </div>
                         <div className="sidebar-account-phone-number">
-                            <p><span>Phone Number: </span>{item.phoneNumber}</p>
+                            <p className='nvidia-xl'><span className='nvidia-xl-bold'>Phone Number: </span>{item.phoneNumber}</p>
                         </div>
                         <div className="sidebar-account-email">
-                            <p><span>Email: </span>{item.email}</p>
+                            <p className='nvidia-xl'><span className='nvidia-xl-bold'>Email: </span>{item.email}</p>
                         </div>
                     </div>
                 ))}
                 <div className="sidebar-result">
                     <div className="sidebar-result-sum">
-                        <p><span>Final Sum: </span>{sum} USD</p>
+                        <p className='nvidia-xl'><span className='nvidia-xl-bold'>Final Sum: </span>{sum} USD</p>
                     </div>
                     <div className="sidebar-result-quantity">
-                        <p><span>Quantity products: </span>{quantity}</p>
+                        <p className='nvidia-xl'><span className='nvidia-xl-bold'>Quantity products: </span>{quantity}</p>
                     </div>
                     <div className="sidebar-result-confirm">
-                        <NavLink to='/checkoutOrder'>Confirm</NavLink>
+                        <NavLink to='/checkoutOrder' className='nvidia-button'>Confirm</NavLink>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,6 @@ import {motion} from "framer-motion";
 /*-------------------------------------*/
 const CheckoutAcceptList:FC = () => {
     const {products} = useAppSelector(state => state.checkoutReducer)
-    console.log(products, 'products')
     /*-------------------------------------*/
     const ProductItems = {
         hidden: {opacity: 1, scale: 0},
@@ -35,13 +34,15 @@ const CheckoutAcceptList:FC = () => {
                     </div>
                     <div className="checkout-accept-product-content">
                         <div className="checkout-accept-product-content-title">
-                            <p>{product.name}</p>
+                            <p className='nvidia-2xl-bold'>{product.name}</p>
                         </div>
                         <div className="checkout-accept-product-content-description">
-                            <p>{product.description}</p>
+                            <p className='nvidia-p'>{product.description}</p>
                         </div>
                         <div className="checkout-accept-product-content-price">
-                            <p>Price <span>{product.finalPrice}</span> for <span>{product.quantity}</span> pieces</p>
+                            <p className='nvidia-p'>
+                                Price <span className='nvidia-p-bold'>{product.finalPrice}</span> for <span className='nvidia-p-bold'>{product.quantity}</span> pieces
+                            </p>
                         </div>
                     </div>
                 </motion.li>

@@ -25,7 +25,7 @@ const ProductSinglePage = () => {
     /*--------------------------------------------*/
     if (isLoading) {
         return (
-            <div className='product-single-loading'>
+            <div className='product-single-loading container'>
                 <motion.div
                     animate={{
                         rotate: 360,
@@ -43,12 +43,12 @@ const ProductSinglePage = () => {
     /*--------------------------------------------*/
     if (error) {
         return (
-            <div className='product-single-error'><p>{error}</p></div>
+            <div className='product-single-error container'><p className='nvidia-2xl-bold'>{error}</p></div>
         )
     }
     /*--------------------------------------------*/
     return (
-        <motion.div className='product-single-page'
+        <motion.div className='product-single-page container'
                     initial={{opacity: 0, scale: 0.5}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{duration: 0.8}}>

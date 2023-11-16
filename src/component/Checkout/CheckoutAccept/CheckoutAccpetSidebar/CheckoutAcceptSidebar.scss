@@ -11,12 +11,6 @@
     &-phone-number,
     &-email{
       @apply py-2;
-      p{
-        span{
-          @apply text-xl font-bold;
-        }
-        @apply text-xl font-normal;
-      }
     }
 
   }
@@ -28,22 +22,16 @@
     &-quantity{
       @apply py-2;
       p{
+        color: #76b900;
         span{
           color: #ffffff;
-          @apply text-xl font-bold;
         }
-        @apply text-xl font-normal;
-        color: #76b900;
       }
     }
     &-confirm{
       @apply pt-5;
       a{
-        @apply text-lg p-1.5 block w-full text-black text-center rounded-none duration-500 transition;
-        background-color: #76b900;
-        &:hover{
-          background-color: #91c733;
-        }
+        @apply block text-center p-2.5;
       }
     }
   }

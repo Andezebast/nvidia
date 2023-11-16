@@ -12,7 +12,6 @@ export const fetchProduct = (id: string | undefined) => async (dispatch: AppDisp
     try{
         dispatch(productSlice.actions.productsFetching())
         const response = await axios.get<IProduct[]>(`https://649952ff79fbe9bcf83f012e.mockapi.io/nvidia-products/${id}`)
-        console.log(response);
         const mass: any[] = [];
         mass.push(response.data)
         setTimeout(()=>{

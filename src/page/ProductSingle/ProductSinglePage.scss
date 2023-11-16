@@ -1,13 +1,13 @@
 .product-single-loading,
-.product-single-error {
-  @apply flex items-center flex-col justify-center col-start-2 col-end-4 py-20 h-full;
+.product-single-error{
+  @apply flex items-center flex-col justify-center col-start-2 col-end-4 h-full;
   svg {
     max-width: 100px;
   }
 }
 
 .product-single-item {
-  @apply max-w-xl mx-auto py-20 flex flex-col items-center justify-center;
+  @apply max-w-xl mx-auto flex flex-col items-center justify-center;
   &-name {
     @apply py-5;
   }

@@ -1,5 +1,4 @@
 .about-content{
-  @apply max-w-screen-xl m-auto px-5 py-24;
   &.full-screen{
     background-color: #1a1a1a;
     @apply max-w-none;
@@ -30,7 +29,7 @@
   /*-----------Architecture------------*/
   /*-----------Performance-------------*/
   &-performance{
-    @apply max-w-screen-xl m-auto flex flex-col text-center items-center;
+    @apply flex flex-col text-center items-center;
     &-title{
       @apply pb-10 text-center;
     }
@@ -109,7 +108,7 @@
   /*----------------DLLS---------------*/
   &-dlss,
   &-reflex{
-    @apply relative z-20 max-w-screen-xl m-auto px-5 py-24 flex flex-col text-center items-center;
+    @apply relative z-20 flex flex-col text-center items-center;
     &-background{
       @apply absolute top-0 left-0 z-10 w-full h-full;
       img{

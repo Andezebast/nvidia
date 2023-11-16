@@ -22,10 +22,10 @@ const  CheckoutOrder:FC = () => {
                         animate={{opacity: 1, scale: 1, y: 0}}
                         transition={{duration: 1}}>
                 <div className="checkout-order-content-title">
-                    <p>Your order <span>#{randomNumber}</span> has been placed</p>
+                    <p className='nvidia-xl-bold'>Your order <span>#{randomNumber}</span> has been placed</p>
                 </div>
                 <div className="checkout-order-content-subtitle">
-                    <p>Our manager will contact you shortly.</p>
+                    <p className='nvidia-xl-bold'>Our manager will contact you shortly.</p>
                 </div>
                 <div className="checkout-order-content-button">
                     <Button onClick={handleEventButton}>Go to Category Page</Button>

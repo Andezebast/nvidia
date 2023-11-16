@@ -25,10 +25,10 @@ const CheckoutForm: FC = () => {
         <motion.div initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}} transition={{duration: 0.8}}>
             <form onSubmit={handleSubmit(submit)} className='checkout-login-form'>
                 <div className="checkout-login-form-title">
-                    <p>Account Form</p>
+                    <p className='nvidia-2xl-bold'>Account Form</p>
                 </div>
                 <div className='checkout-login-form-input'>
-                    <label htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName" className='nvidia-xl-bold'>First Name</label>
                     <input type="text"
                            id='firstName' {...register('firstName', {required: 'Please, enter your first name'})}/>
                     {errors.firstName && (
@@ -36,7 +36,7 @@ const CheckoutForm: FC = () => {
                     )}
                 </div>
                 <div className='checkout-login-form-input'>
-                    <label htmlFor="lastName">Last Name</label>
+                    <label htmlFor="lastName" className='nvidia-xl-bold'>Last Name</label>
                     <input type="text"
                            id='lastName' {...register('lastName', {required: 'Please, enter your last name'})}/>
                     {errors.lastName && (
@@ -44,7 +44,7 @@ const CheckoutForm: FC = () => {
                     )}
                 </div>
                 <div className='checkout-login-form-input'>
-                    <label htmlFor="phoneNumber">Phone Number</label>
+                    <label htmlFor="phoneNumber" className='nvidia-xl-bold'>Phone Number</label>
                     <InputMask
                         {...register('phoneNumber', {required: 'Please, enter your phone number'})}
                         id='phoneNumber'
@@ -55,7 +55,7 @@ const CheckoutForm: FC = () => {
                     )}
                 </div>
                 <div className='checkout-login-form-input'>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" className='nvidia-xl-bold'>Email</label>
                     <input type="text" id='email'
                            {...register('email', {
                                required: 'Please, enter your email',
@@ -69,7 +69,7 @@ const CheckoutForm: FC = () => {
                     )}
                 </div>
                 <div className='checkout-login-form-button'>
-                    <button type='submit'>Confirm!</button>
+                    <button type='submit' className='nvidia-button'>Confirm!</button>
                 </div>
             </form>
         </motion.div>

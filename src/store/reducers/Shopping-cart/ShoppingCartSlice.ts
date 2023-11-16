@@ -18,7 +18,6 @@ export const ShoppingCartSlice = createSlice({
         },
         RemoveFromShoppingCart(state, action: PayloadAction<IProduct>) {
             let index = state.shoppingCartProducts.findIndex(product => product.id === action.payload.id)
-            console.log(index)
             if (index > -1) {
                 state.shoppingCartProducts.splice(index, 1);
             }

@@ -41,7 +41,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
     switch (activeTab) {
         case 'Architecture':
             return (
-                <motion.div className='about-content'
+                <motion.div className='about-content container'
                             key='architecture'
                             initial={{opacity: 0, scale: 0.5}}
                             animate={{opacity: 1, scale: 1}}
@@ -88,7 +88,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
         case 'Performance':
             return (
                 <div className='about-content full-screen'>
-                    <motion.div className="about-content-performance"
+                    <motion.div className="about-content-performance container"
                                 key='performance'
                                 initial={{opacity: 0, scale: 0.5}}
                                 animate={{opacity: 1, scale: 1}}
@@ -118,7 +118,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
             )
         case 'RayTracing':
             return (
-                <motion.div className='about-content'
+                <motion.div className='about-content container'
                             key='rtx'
                             initial={{opacity: 0, scale: 0.5}}
                             animate={{opacity: 1, scale: 1}}
@@ -251,7 +251,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
                                 transition={{duration: 1}}>
                         <img src={NvidiaDLSSBackground} alt="about-dlss-background"/>
                     </motion.div>
-                    <motion.div className="about-content-dlss"
+                    <motion.div className="about-content-dlss container"
                                 key='dlss-content'
                                 initial={{opacity: 0, scale: 0.5, bottom: -200}}
                                 animate={{opacity: 1, scale: 1, bottom: 0}}
@@ -295,7 +295,7 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
                                 transition={{duration: 1}}>
                         <img src={NvidiaReflexBackground} alt="about-reflex-background"/>
                     </motion.div>
-                    <motion.div className="about-content-reflex"
+                    <motion.div className="about-content-reflex container"
                                 key='reflex-content'
                                 initial={{opacity: 0, scale: 0.5, bottom: -200}}
                                 animate={{opacity: 1, scale: 1, bottom: 0}}

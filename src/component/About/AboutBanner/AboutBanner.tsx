@@ -13,7 +13,7 @@ const AboutBanner: FC = () => {
                         transition={{duration: 3}}>
                 <img src={NvidiaBackground} alt="nvidia-background"/>
             </motion.div>
-            <motion.div className="about-banner-container"
+            <motion.div className="about-banner-container container"
                         key='about-banner'
                         initial={{
                             opacity: 0,

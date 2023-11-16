@@ -7,7 +7,7 @@ import ShoppingCartSideBar from '../../component/ShoppingCart/ShoppingCartSideBa
 const ShoppingCartPage: FC = () => {
     /*-----------------------------------*/
     return (
-        <div className='shopping-cart'>
+        <div className='shopping-cart container'>
             <motion.div className="shopping-cart-title"
                         initial={{opacity: 0, scale: 0.5, y: 500}}
                         animate={{opacity: 1, scale: 1, y: 0}}
