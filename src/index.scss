@@ -8,21 +8,35 @@ body{
     @apply h-full;
     .container{
       @apply max-w-screen-xl m-auto px-5 py-24;
+      @media(max-width: 1199px){
+        @apply py-16;
+      }
     }
   }
+  &.overflow{
+    overflow: hidden;
+  }
 }
-
 /*-----------------*/
 .nvidia-5xl{
   @apply text-5xl font-bold;
+  @media(max-width: 1199px){
+    @apply text-4xl;
+  }
 }
 /*-----------------*/
 .nvidia-4xl{
   @apply text-4xl font-bold;
+  @media(max-width: 1199px){
+    @apply text-3xl;
+  }
 }
 /*-----------------*/
 .nvidia-3xl-bold{
   @apply text-3xl font-bold;
+  @media(max-width: 1199px){
+    @apply text-2xl;
+  }
 }
 .nvidia-3xl{
   @apply text-3xl font-semibold;
@@ -30,12 +44,21 @@ body{
 /*-----------------*/
 .nvidia-2xl-bold{
   @apply text-2xl font-bold;
+  @media(max-width: 1199px){
+    @apply text-xl;
+  }
 }
 .nvidia-2xl-semibold{
   @apply text-2xl font-semibold;
+  @media(max-width: 1199px){
+    @apply text-xl;
+  }
 }
 .nvidia-2xl-normal{
   @apply text-2xl font-normal;
+  @media(max-width: 1199px){
+    @apply text-xl;
+  }
 }
 /*-----------------*/
 .nvidia-xl-bold{

@@ -1,0 +1,20 @@
+.header-container-links{
+  .header-link{
+    @apply text-white mx-1.5 p-2 duration-500 font-medium relative;
+    span{
+      @apply absolute w-6 h-6 flex rounded-full justify-center items-center duration-200;
+      top: -10px;
+      right: -10px;
+      background-color: #76b900;
+      border: 1px solid transparent;
+    }
+    &:hover,
+    &.active{
+      background-color: #76b900;
+      span{
+        @apply border-solid border border-black;
+      }
+      @apply rounded text-black;
+    }
+  }
+}

@@ -43,16 +43,11 @@
     &-content {
       height: 500px;
       @apply relative z-20 py-0 flex flex-col justify-center;
-      &-title {
+      &-title,
+      &-subtitle{
         max-width: 600px;
         @apply py-2;
       }
-
-      &-subtitle {
-        max-width: 600px;
-        @apply py-2;
-      }
-
       &-button {
         @apply pt-3;
         max-width: 150px;
@@ -61,20 +56,13 @@
   }
 }
 /*----------------------*/
-//@media(max-width: 1200px) {
-//  .home-page-slider {
-//    .slider-item-content-title {
-//      max-width: 400px;
-//      p {
-//        @apply text-4xl;
-//      }
-//    }
-//    .slider-item-content-subtitle {
-//      max-width: 400px;
-//      p {
-//        @apply text-xl;
-//      }
-//    }
-//  }
-//}
+@media(max-width: 1199px) {
+  .home-page-slider .slider-item-content{
+    height: 400px;
+    &-title,
+    &-subtitle{
+      max-width: 450px;
+    }
+  }
+}
 /*----------------------*/

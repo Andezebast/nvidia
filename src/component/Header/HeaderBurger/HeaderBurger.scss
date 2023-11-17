@@ -1,0 +1,68 @@
+.header-container-burger{
+  .burger-icon{
+    background-color: #76b900;
+    @apply text-black px-1 min-w-0 w-9 h-9 flex flex-col justify-between;
+    &:hover,
+    &:active{
+      background-color: #76b900;
+    }
+    .MuiTouchRipple-root{
+      @apply hidden;
+    }
+    span{
+      height: 4px;
+      width: 100%;
+      border-radius: 4px;
+      padding: 0 2px;
+      background-color: black;
+      transition: 1s ease;
+      opacity: 1;
+      transform: translateY(0px) rotate(0deg);
+      cursor: pointer;
+    }
+    &.open{
+      span{
+        &:nth-child(1){
+          transform: translateY(10px) rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  .burger-content{
+    border-color: #76b900;
+    @apply text-white bg-black absolute -z-50 top-0 right-0 h-full border-l-4 p-5 w-48 opacity-0;
+    transition: all 1s ease;
+    &.open{
+      @apply z-50 opacity-100 w-6/12;
+    }
+    &-Links{
+      @apply flex flex-col gap-3;
+      .burger-link{
+        border-color: #76b900;
+        @apply p-1.5 border-b-2 border-solid relative;
+        span{
+          @apply absolute w-6 h-6 flex rounded-full justify-center items-center duration-200;
+          top: 1px;
+          left: 110px;
+          background-color: #76b900;
+          border: 1px solid transparent;
+        }
+        &:hover,
+        &.active{
+          background-color: #76b900;
+          @apply font-medium;
+          span{
+            @apply border-solid border-2 border-black;
+          }
+          @apply rounded text-black;
+        }
+      }
+    }
+  }
+}

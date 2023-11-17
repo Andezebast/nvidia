@@ -1,25 +1,41 @@
-import React from 'react';
-import './header.scss';
-import {Link, NavLink} from "react-router-dom";
-import {useAppSelector} from '../../hooks/redux';
+import React, {useEffect, useRef, useState} from 'react';
+import './Header.scss';
 import NvidiaLogo from "../../svg/NvidiaLogo";
+import {Link} from "react-router-dom";
+/*-----------------------------------------*/
+import HeaderBurger from "./HeaderBurger/HeaderBurger";
+import HeaderLinks from "./HeaderLinks/HeaderLinks";
 /*-----------------------------------------*/
 const Header = () => {
-    const shoppingCartLength = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
-    /*-----------------------------------------*/
+    const [isMobile, setIsMobile] = useState<boolean>(true);
+    const [headerHeight, setHeaderHeight] = useState<number>(0);
+    let header = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (window.innerWidth >= 991) {
+            setIsMobile(false)
+        }
+        if(header.current){
+            setHeaderHeight(header.current.offsetHeight)
+        }
+    }, [])
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 991) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+    })
     return (
-        <div className='header'>
+        <div className='header' ref={header}>
             <div className="header-container">
                 <Link to='/nvidia' className="header-container-img">
-                    <NvidiaLogo />
+                    <NvidiaLogo/>
                 </Link>
-                <div className="header-container-links">
-                    <NavLink className="header-link" to='/about'>About page</NavLink>
-                    <NavLink className="header-link" to='/news'>News page</NavLink>
-                    <NavLink className="header-link" to='/driver'>Driver page</NavLink>
-                    <NavLink className="header-link" to='/products'>Category page</NavLink>
-                    <NavLink className="header-link" to='/shopping'>Shopping cart {shoppingCartLength.length >= 1 && <span>{shoppingCartLength.length}</span>}</NavLink>
-                </div>
+                {isMobile
+                    ? (<HeaderBurger headerHeight={headerHeight}/>)
+                    : (<HeaderLinks/>)
+                }
             </div>
         </div>
     );
