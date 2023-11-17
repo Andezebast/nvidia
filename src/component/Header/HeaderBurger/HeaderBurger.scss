@@ -36,7 +36,7 @@
   }
   .burger-content{
     border-color: #76b900;
-    @apply text-white bg-black absolute -z-50 top-0 right-0 h-full border-l-4 p-5 w-48 opacity-0;
+    @apply text-white bg-black absolute -z-50 top-0 right-0 h-full border-l-4 p-5 w-48 opacity-0 pb-28 overflow-y-auto;
     transition: all 1s ease;
     &.open{
       @apply z-50 opacity-100 w-6/12;
