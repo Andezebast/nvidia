@@ -9,10 +9,12 @@ import HeaderLinks from "./HeaderLinks/HeaderLinks";
 const Header = () => {
     const [isMobile, setIsMobile] = useState<boolean>(true);
     const [headerHeight, setHeaderHeight] = useState<number>(0);
+
     let header = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        if (window.innerWidth >= 991) {
-            setIsMobile(false)
+        if(window.innerWidth >= 992){
+            setIsMobile(false);
         }
         if(header.current){
             setHeaderHeight(header.current.offsetHeight)
@@ -20,10 +22,10 @@ const Header = () => {
     }, [])
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 991) {
-            setIsMobile(true)
-        } else {
+        if (window.innerWidth >= 992) {
             setIsMobile(false)
+        } else {
+            setIsMobile(true)
         }
     })
     return (

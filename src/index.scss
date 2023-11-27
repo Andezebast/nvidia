@@ -8,7 +8,7 @@ body{
     @apply h-full;
     .container{
       @apply max-w-screen-xl m-auto px-5 py-24;
-      @media(max-width: 1199px){
+      @media(max-width: 1200px){
         @apply py-16;
       }
     }
@@ -20,43 +20,55 @@ body{
 /*-----------------*/
 .nvidia-5xl{
   @apply text-5xl font-bold;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-4xl;
+  }
+  @media(max-width: 768px){
+    @apply text-3xl;
+  }
+  @media(max-width: 576px){
+    @apply text-2xl;
   }
 }
 /*-----------------*/
 .nvidia-4xl{
   @apply text-4xl font-bold;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-3xl;
+  }
+  @media(max-width: 768px){
+    @apply text-2xl;
   }
 }
 /*-----------------*/
 .nvidia-3xl-bold{
   @apply text-3xl font-bold;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-2xl;
   }
 }
 .nvidia-3xl{
   @apply text-3xl font-semibold;
+  @media(max-width: 1200px){
+    @apply text-2xl;
+  }
 }
 /*-----------------*/
 .nvidia-2xl-bold{
   @apply text-2xl font-bold;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-xl;
   }
 }
 .nvidia-2xl-semibold{
   @apply text-2xl font-semibold;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-xl;
   }
 }
 .nvidia-2xl-normal{
   @apply text-2xl font-normal;
-  @media(max-width: 1199px){
+  @media(max-width: 1200px){
     @apply text-xl;
   }
 }
@@ -84,5 +96,8 @@ body{
   @apply p-4 text-lg text-black font-semibold duration-500 flex items-center justify-center;
   &:hover {
     background-color: #91c733;
+  }
+  @media(max-width: 768px){
+    @apply p-3;
   }
 }

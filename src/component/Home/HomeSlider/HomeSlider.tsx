@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState, useEffect} from 'react';
 import './HomeSlider.scss';
 import {Link} from "react-router-dom";
 import {motion} from "framer-motion";
@@ -9,9 +9,13 @@ import "slick-carousel/slick/slick-theme.css";
 /*-----------------------------*/
 import nvidiaSliderFirst from './img/nvidia-slider-1.jpg';
 import nvidiaSliderSecond from './img/nvidia-slider-2.jpg';
+import nvidiaSliderSecondMini from './img/nvidia-slider-2-mini.jpg';
 import nvidiaSliderThird from './img/nvidia-slider-3.jpg';
+import nvidiaSliderThirdMini from './img/nvidia-slider-3-mini.jpg';
 import nvidiaSliderFourth from './img/nvidia-slider-4.jpg';
+import nvidiaSliderFourthMini from './img/nvidia-slider-4-mini.jpg';
 import nvidiaSliderFifth from './img/nvidia-slider-5.jpg';
+import nvidiaSliderFifthMini from './img/nvidia-slider-5-mini.jpg';
 /*-----------------------------*/
 const HomeSlider: FC = () => {
     const settings = {
@@ -21,7 +25,21 @@ const HomeSlider: FC = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
-
+    /*-----------------------------*/
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+    useEffect(() => {
+        if(window.innerWidth >= 768){
+            setIsMobile(false);
+        }
+    }, [])
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            setIsMobile(false)
+        } else {
+            setIsMobile(true)
+        }
+    })
+    /*-----------------------------*/
     return (
         <div className='home-page-slider'>
             <motion.div className='home-page-slider-animation'
@@ -47,7 +65,10 @@ const HomeSlider: FC = () => {
                     </div>
                     <div className='slider-item'>
                         <div className="slider-item-background">
-                            <img src={nvidiaSliderSecond} alt="first-slider-image"/>
+                            {isMobile 
+                            ?(<img src={nvidiaSliderSecondMini} alt="second-slider-image"/>) 
+                            :(<img src={nvidiaSliderSecond} alt="second-slider-image"/>)
+                            }
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
@@ -63,7 +84,10 @@ const HomeSlider: FC = () => {
                     </div>
                     <div className='slider-item'>
                         <div className="slider-item-background">
-                            <img src={nvidiaSliderThird} alt="first-slider-image"/>
+                            {isMobile 
+                            ?(<img src={nvidiaSliderThirdMini} alt="third-slider-image"/>) 
+                            :(<img src={nvidiaSliderThird} alt="third-slider-image"/>)
+                            }
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
@@ -79,7 +103,10 @@ const HomeSlider: FC = () => {
                     </div>
                     <div className='slider-item'>
                         <div className="slider-item-background">
-                            <img src={nvidiaSliderFourth} alt="first-slider-image"/>
+                            {isMobile 
+                            ?(<img src={nvidiaSliderFourthMini} alt="fourth-slider-image"/>) 
+                            :(<img src={nvidiaSliderFourth} alt="fourth-slider-image"/>)
+                            }
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">
@@ -95,7 +122,10 @@ const HomeSlider: FC = () => {
                     </div>
                     <div className='slider-item'>
                         <div className="slider-item-background">
-                            <img src={nvidiaSliderFifth} alt="first-slider-image"/>
+                            {isMobile 
+                            ?(<img src={nvidiaSliderFifthMini} alt="fifth-slider-image"/>) 
+                            :(<img src={nvidiaSliderFifth} alt="fifth-slider-image"/>)
+                            }
                         </div>
                         <div className="slider-item-content container">
                             <div className="slider-item-content-title">

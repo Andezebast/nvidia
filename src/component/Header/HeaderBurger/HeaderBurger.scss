@@ -15,7 +15,7 @@
       border-radius: 4px;
       padding: 0 2px;
       background-color: black;
-      transition: 1s ease;
+      transition: 0.5s ease;
       opacity: 1;
       transform: translateY(0px) rotate(0deg);
       cursor: pointer;
@@ -36,10 +36,10 @@
   }
   .burger-content{
     border-color: #76b900;
-    @apply text-white bg-black absolute -z-50 top-0 right-0 h-full border-l-4 p-5 w-48 opacity-0 pb-28 overflow-y-auto;
     transition: all 1s ease;
+    @apply text-white bg-black z-50 fixed top-0 -right-full w-6/12 h-full border-l-4 p-5 pb-28 overflow-y-auto;
     &.open{
-      @apply z-50 opacity-100 w-6/12;
+      @apply right-0;
     }
     &-Links{
       @apply flex flex-col gap-3;
@@ -64,5 +64,10 @@
         }
       }
     }
+  }
+}
+@media(max-width: 576px){
+  .header-container-burger .burger-content{
+    @apply w-full;
   }
 }

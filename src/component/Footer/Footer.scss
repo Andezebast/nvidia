@@ -41,3 +41,22 @@
     }
   }
 }
+/*-----------------------------*/
+@media(max-width: 576px){
+  .footer{
+    @apply py-6;
+  }
+  .footer-main{
+    .footer-columns{
+        @apply grid-cols-1; 
+    }
+  } 
+  .footer-bottom{
+    &-logo{
+      @apply flex justify-center;
+    }
+    &-description{
+      @apply justify-center;
+    }
+  }
+}
