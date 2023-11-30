@@ -30,3 +30,24 @@
     }
   }
 }
+/*----------------------*/
+@media(max-width: 992px){
+  .driver-page-info{
+    @apply mt-0 pt-8;
+  }
+}
+/*----------------------*/
+@media(max-width: 768px){
+  .driver-page-info{
+    @apply flex-col;
+    border: unset;
+    &-item.studio,
+    &-item.forum{
+      @apply w-full p-0;  
+      border: unset;
+    }
+    &-item.forum{
+      @apply pb-5;
+    }
+  }
+}

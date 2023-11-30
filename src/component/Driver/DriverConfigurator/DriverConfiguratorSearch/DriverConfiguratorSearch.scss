@@ -26,3 +26,32 @@
     }
   }
 }
+/*------------------------*/
+@media(max-width: 1200px){
+  .driver-configurator-search-form .search-form-selector p{
+    width: 55%;
+  }
+}
+/*------------------------*/
+@media(max-width: 992px){
+  .driver-configurator-search-form{
+    @apply grid grid-cols-2 gap-5;
+    .search-form-selector{
+      @apply flex-col items-start p-0;
+      p{
+        @apply w-auto pb-2;
+      }
+    } 
+  } 
+}
+/*------------------------*/
+@media(max-width: 576px){
+  .driver-configurator-search-form{
+    @apply grid-cols-1;
+    .search-form-selector{
+      select{
+        @apply w-full;
+      }
+    }
+  }
+}

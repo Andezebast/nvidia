@@ -31,3 +31,21 @@
     color: #76b900;
   }
 }
+/*----------------------*/
+@media(max-width: 768px){
+  .driver-page-configurator-list{
+    border-bottom: 3px solid #616161;
+  }
+}
+/*----------------------*/
+@media(max-width: 576px){
+  .driver-configurator-items .driver-configurator-item{
+    @apply flex-col;
+    &-image{
+      @apply w-32;
+    }
+    &-content{
+      @apply text-center py-4 px-0;
+    }
+  }
+}
