@@ -17,16 +17,14 @@
     @apply pt-10 grid grid-cols-3 gap-5;
   }
   &-item{
-    @apply flex flex-col items-center text-center;
+    @apply flex flex-col items-center text-center justify-between;
     &-image{
-      @apply pb-2.5;
+      @apply pb-2.5 h-80;
       img{
-        @apply w-full h-full object-cover;
+        @apply w-full h-full object-contain;
       }
     }
-    &-title{
-      @apply py-2.5 grow;
-    }
+    &-title,
     &-subtitle{
       @apply py-2.5 grow;
     }
@@ -39,6 +37,9 @@
 @media(max-width: 992px){
   .home-page-info-items{
     @apply grid-cols-2;
+  }
+  .home-page-info-item-image{
+    @apply h-60;
   }
 }
 @media(max-width: 576px){

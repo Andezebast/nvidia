@@ -9,9 +9,9 @@ import HeaderLinks from "./HeaderLinks/HeaderLinks";
 const Header = () => {
     const [isMobile, setIsMobile] = useState<boolean>(true);
     const [headerHeight, setHeaderHeight] = useState<number>(0);
-
+    const [burgerActive, setBurgerActive] = useState<boolean>(false);
+    /*-----------------------------------------*/
     let header = useRef<HTMLDivElement>(null);
-
     useEffect(() => {
         if(window.innerWidth >= 992){
             setIsMobile(false);
@@ -20,7 +20,7 @@ const Header = () => {
             setHeaderHeight(header.current.offsetHeight)
         }
     }, [])
-
+    /*-----------------------------------------*/
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 992) {
             setIsMobile(false)
@@ -28,14 +28,18 @@ const Header = () => {
             setIsMobile(true)
         }
     })
+    const handleEventNvidia = () =>{
+        setBurgerActive(false)
+    }
+    /*-----------------------------------------*/
     return (
         <div className='header' ref={header}>
             <div className="header-container">
-                <Link to='/nvidia' className="header-container-img">
+                <Link to='/nvidia' className="header-container-img" onClick={handleEventNvidia}>
                     <NvidiaLogo/>
                 </Link>
                 {isMobile
-                    ? (<HeaderBurger headerHeight={headerHeight}/>)
+                    ? (<HeaderBurger headerHeight={headerHeight} burgerActive={burgerActive} setBurgerActive={setBurgerActive}/>)
                     : (<HeaderLinks/>)
                 }
             </div>

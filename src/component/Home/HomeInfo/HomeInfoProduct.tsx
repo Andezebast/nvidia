@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {motion} from "framer-motion";
 /*-------------------------------------*/
 import VideoCard from './img/home-product-video-card.jpg';
-import Laptop from './img/home-product-laptop.jpg';
+import Laptop from './img/home-product-laptop.png';
 import PC from './img/home-product-pc.jpg';
 /*-------------------------------------*/
 const HomeInfoProduct: FC = () => {

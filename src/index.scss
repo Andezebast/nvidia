@@ -11,6 +11,9 @@ body{
       @media(max-width: 1200px){
         @apply py-16;
       }
+      @media(max-width: 768px){
+        @apply py-8;
+      }
     }
   }
   &.overflow{

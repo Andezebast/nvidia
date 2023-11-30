@@ -8,10 +8,11 @@ import {useAppSelector} from "../../../hooks/redux";
 /*-----------------------------------------*/
 interface HeaderBurgerProps {
     headerHeight: number,
+    burgerActive: boolean,
+    setBurgerActive: Function
 }
 /*-----------------------------------------*/
-const HeaderBurger: FC<HeaderBurgerProps> = ({headerHeight}) => {
-    const [burgerActive, setBurgerActive] = useState<boolean>(false);
+const HeaderBurger: FC<HeaderBurgerProps> = ({headerHeight, burgerActive, setBurgerActive}) => {
     const shoppingCartLength = useAppSelector(state => state.shoppingCartProductReducer.shoppingCartProducts);
     /*-----------------------------------------*/
     const body = document.body;
