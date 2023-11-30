@@ -124,6 +124,10 @@
     &-description{
       @apply max-w-4xl pb-14;
     }
+    &-video{
+      width: 850px;
+      height: 480px;
+    }
     &-under-text{
       @apply pt-5;
       p{
@@ -139,4 +143,74 @@
     }
   }
   /*---------------Reflex--------------*/
+}
+/*------------------------*/
+@media(max-width: 992px){
+  .about-content{
+    &-architecture-subtitle{
+      @apply pb-12;
+    }
+    /*-----------------------*/
+    &-performance-title,
+    &-rtx-title{
+      @apply pb-5;
+    }
+    /*-----------------------*/
+    &-dlss-description{
+      @apply pb-10;
+    }
+    /*-----------------------*/
+    &-dlss-video{
+      width: 700px;
+      height: 395px;
+    }
+  }
+}
+/*------------------------*/
+@media(max-width: 768px){
+  .about-content{
+    &-architecture-content{
+      @apply grid-cols-1 gap-5;
+    }
+    /*-----------------------*/
+    &-rtx-items{
+      @apply grid-cols-1 gap-8;
+    }
+    /*-----------------------*/
+    &-reflex-description{
+      @apply pb-40;
+    }
+    /*-----------------------*/
+    &-dlss-video{
+      width: 500px;
+      height: 280px;
+    }
+  }
+}
+/*------------------------*/
+@media(max-width: 576px){
+  .about-content{
+    &-architecture-subtitle{
+      @apply pb-8;
+    }
+    /*-----------------------*/
+    &-performance-subtitle{
+      @apply py-5;
+    }
+    /*-----------------------*/
+    &-dlss-description{
+      @apply pb-5;
+    }
+    /*-----------------------*/
+    &-dlss-subtitle,
+    &-dlss-title,
+    &-reflex-subtitle,
+    &-reflex-title{
+      @apply pb-2.5;
+    }
+    &-dlss-video{
+      width: 300px;
+      height: 165px;
+    }
+  }
 }

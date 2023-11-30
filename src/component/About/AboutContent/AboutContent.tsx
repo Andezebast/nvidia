@@ -270,12 +270,14 @@ const AboutContent: FC<IProps> = ({activeTab}) => {
                                 create additional frames and improve image quality.
                             </p>
                         </div>
+                        <div className="about-content-dlss-video">
                         <ReactPlayer
                             url="https://www.youtube.com/watch?v=QGI8EIgf8Y8&t=1s"
-                            width="850px"
-                            height="480px"
+                            width="100%"
+                            height="100%"
                             controls
                         />
+                        </div>
                         <div className="about-content-dlss-under-text">
                             <p className='nvidia-xs-p'>
                                 *Shot using GeForce RTX 4090 at 3840 x 2160 with maximum gaming settings and RT

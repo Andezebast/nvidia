@@ -14,3 +14,15 @@
     }
   }
 }
+/*------------------------*/
+@media(max-width: 576px){
+  .about-navigation{
+    &-items{
+      @apply justify-between flex-wrap;
+    }
+    &-item{
+      width: calc(50% - 10px);
+      @apply text-center p-3;
+    }
+  }
+}
