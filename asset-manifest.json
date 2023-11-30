@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/nvidia/static/css/main.90dca71a.css",
-    "main.js": "/nvidia/static/js/main.4b67b069.js",
+    "main.css": "/nvidia/static/css/main.c544f0d1.css",
+    "main.js": "/nvidia/static/js/main.b7393e65.js",
+    "static/media/home-product-laptop.png": "/nvidia/static/media/home-product-laptop.8c63f8648ee1a6a25569.png",
     "static/media/Nvidia RTX 4090.jpg": "/nvidia/static/media/Nvidia RTX 4090.5e856fff555fbaf9c807.jpg",
     "static/media/nvidia-architecture.jpg": "/nvidia/static/media/nvidia-architecture.cd0ebcf7c394f3e09ce0.jpg",
     "static/media/nvidia-dlss-background.jpg": "/nvidia/static/media/nvidia-dlss-background.39da290f6afe89f4481d.jpg",
@@ -24,18 +25,17 @@
     "static/media/home-driver-download.png": "/nvidia/static/media/home-driver-download.269ded5291d68f653e8f.png",
     "static/media/home-driver-accept.png": "/nvidia/static/media/home-driver-accept.300ad0decdafd8b6b0df.png",
     "static/media/home-product-video-card.jpg": "/nvidia/static/media/home-product-video-card.856e4cc82984073c2606.jpg",
-    "static/media/home-product-laptop.jpg": "/nvidia/static/media/home-product-laptop.5c79f08cb66f3a182999.jpg",
     "static/media/nvidia-performance.png": "/nvidia/static/media/nvidia-performance.325288130428140f7e20.png",
     "static/media/slick.svg": "/nvidia/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/nvidia/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/nvidia/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/nvidia/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/nvidia/index.html",
-    "main.90dca71a.css.map": "/nvidia/static/css/main.90dca71a.css.map",
-    "main.4b67b069.js.map": "/nvidia/static/js/main.4b67b069.js.map"
+    "main.c544f0d1.css.map": "/nvidia/static/css/main.c544f0d1.css.map",
+    "main.b7393e65.js.map": "/nvidia/static/js/main.b7393e65.js.map"
   },
   "entrypoints": [
-    "static/css/main.90dca71a.css",
-    "static/js/main.4b67b069.js"
+    "static/css/main.c544f0d1.css",
+    "static/js/main.b7393e65.js"
   ]
 }
