@@ -36,8 +36,13 @@
     @apply w-3/6 pt-5;
   }
 }
+@media(max-width: 768px){
+  .shopping-cart-sidebar {
+    @apply w-4/6;
+  }
+}
 @media(max-width: 576px){
   .shopping-cart-sidebar {
-    @apply w-10/12;
+    @apply w-full;
   }
 }
