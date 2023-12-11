@@ -120,9 +120,12 @@
       @apply m-0 p-0 border-0;
     } 
     .filter-content-items{
-      @apply items-start border-0 mx-0 my-3 py-3;
+      @apply flex-row items-start border-0 mx-0 my-3 py-3;
       border-top: 3px solid #76b900;
       border-bottom: 3px solid #76b900;
+      .filter-content-item{
+        @apply pr-2;
+      }
     }
     .filter-content-items,
     .filter-content-category{
