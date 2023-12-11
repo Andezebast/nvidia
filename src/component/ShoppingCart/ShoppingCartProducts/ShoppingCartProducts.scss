@@ -55,7 +55,7 @@
       }
     }
     &-close{
-      @apply absolute top-1 right-1 cursor-pointer duration-500 transition ease-out;
+      @apply absolute top-0 right-1 cursor-pointer duration-500 transition ease-out;
       width: 30px;
       height: 30px;
       border: 2px solid white;
@@ -79,6 +79,32 @@
             transform: translate(-50%, -50%) rotate(315deg);
           }
         }
+      }
+    }
+  }
+}
+/*----------------------*/
+@media(max-width: 1200px){
+  .shopping-cart-products{
+    width: calc(70% - 10px);
+  }
+}
+/*----------------------*/
+@media(max-width: 992px){
+  .shopping-cart-products{
+    @apply w-full;
+  }
+}
+@media(max-width: 768px){
+  .shopping-cart-product{
+    @apply flex-col items-center relative;
+    &-image{
+      @apply w-full;
+    }
+    &-content{
+      @apply w-full pt-5 static;
+      &-close{
+        @apply top-1;
       }
     }
   }

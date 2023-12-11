@@ -25,3 +25,19 @@
     }
   }
 }
+/*----------------------*/
+@media(max-width: 1200px){
+  .shopping-cart-sidebar {
+    width: calc(30% - 10px);
+  }
+}
+@media(max-width: 992px){
+  .shopping-cart-sidebar {
+    @apply w-3/6 pt-5;
+  }
+}
+@media(max-width: 576px){
+  .shopping-cart-sidebar {
+    @apply w-10/12;
+  }
+}

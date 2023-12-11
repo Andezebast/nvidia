@@ -6,3 +6,11 @@
     @apply flex justify-between;
   }
 }
+/*----------------------*/
+@media(max-width: 992px){
+  .shopping-cart{
+    &-content{
+      @apply flex-col items-end;
+    }
+  }
+}
