@@ -50,7 +50,11 @@ const Header = () => {
         </Link>
         {isMobile ? (
           <div className="header-container-icon">
-            <Link to="/shopping" className="header-container-shopping-cart">
+            <Link
+              to="/shopping"
+              className="header-container-shopping-cart"
+              onClick={handleEventNvidia}
+            >
               <ShoppingCart />
               {shoppingCartLength.length >= 1 && (
                 <p>{shoppingCartLength.length}</p>
