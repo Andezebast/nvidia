@@ -9,5 +9,15 @@
         @apply w-full h-full object-cover;
       }
     }
+    &-icon{
+      @apply flex items-center;
+    }
+    &-shopping-cart{
+      @apply mr-5 relative;
+      p{
+        @apply absolute -top-2 -right-2.5 w-5 h-5 flex rounded-full justify-center items-center text-white;
+        background-color: #76b900;
+      }
+    }
   }
 }

@@ -2,14 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Header.scss";
 import NvidiaLogo from "../../svg/NvidiaLogo";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../hooks/redux";
 /*-----------------------------------------*/
 import HeaderBurger from "./HeaderBurger/HeaderBurger";
 import HeaderLinks from "./HeaderLinks/HeaderLinks";
+import ShoppingCart from "../../svg/ShoppingCart";
 /*-----------------------------------------*/
 const Header = () => {
   const [isMobile, setIsMobile] = useState<boolean>(true);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
   const [burgerActive, setBurgerActive] = useState<boolean>(false);
+  /*-----------------------------------------*/
+  const shoppingCartLength = useAppSelector(
+    (state) => state.shoppingCartProductReducer.shoppingCartProducts
+  );
   /*-----------------------------------------*/
   let header = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -43,11 +49,19 @@ const Header = () => {
           <NvidiaLogo />
         </Link>
         {isMobile ? (
-          <HeaderBurger
-            headerHeight={headerHeight}
-            burgerActive={burgerActive}
-            setBurgerActive={setBurgerActive}
-          />
+          <div className="header-container-icon">
+            <Link to="/shopping" className="header-container-shopping-cart">
+              <ShoppingCart />
+              {shoppingCartLength.length >= 1 && (
+                <p>{shoppingCartLength.length}</p>
+              )}
+            </Link>
+            <HeaderBurger
+              headerHeight={headerHeight}
+              burgerActive={burgerActive}
+              setBurgerActive={setBurgerActive}
+            />
+          </div>
         ) : (
           <HeaderLinks />
         )}
